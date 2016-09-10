@@ -7,14 +7,29 @@
 //
 
 import UIKit
+import CoreLocation
+import GooglePlaces
 
-class HWDuringStayViewController: UIViewController {
+struct place {
+    var name : String
+    var imageURL : URL
+    var distance : String
+}
 
-    @IBOutlet weak var placeholderView: UIView!
+class HWDuringStayViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var contact: UIButton!
     
     @IBOutlet weak var change: UIButton!
+    
+    @IBOutlet weak var nearbyImageView: UIImageView!
+    @IBOutlet weak var nearbyCaption: UILabel!
+    
+    var locManager = CLLocationManager()
+    
+    var results : [[String : AnyObject]] = []
+    
+    var image = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +40,153 @@ class HWDuringStayViewController: UIViewController {
         change.layer.cornerRadius = contact.frame.size.height / 2
         change.layer.masksToBounds = true
         
-        placeholderView.layer.cornerRadius = contact.frame.size.height / 2
-        placeholderView.layer.masksToBounds = true
+        locManager.delegate = self
+        locManager.desiredAccuracy = kCLLocationAccuracyBest
+        locManager.requestWhenInUseAuthorization()
+        locManager.startMonitoringSignificantLocationChanges()
+        
+        // Check if the user allowed authorization
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways)
+        {
+            
+            let search = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + "\(locManager.location!.coordinate.latitude)" + "," + "\(locManager.location!.coordinate.longitude)" + "&radius=500&type=restaurant&key=AIzaSyCk-laMzz7nwobXmg3NHUCyg8PaAFe_Jrk"
+
+            
+            let searchURL = URL(string: search);
+            var request = URLRequest(url: searchURL!)
+            request.httpMethod = "GET"
+            
+            let task = URLSession.shared.dataTask(with: request) {
+                data, response, error in
+                
+                if error != nil {
+                    print(error!.localizedDescription)
+                    DispatchQueue.main.sync(execute: {
+                        print("cry network")
+                    })
+                    
+                    return
+                }
+                
+            
+            
+            do {
+                
+                let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:AnyObject]
+            
+                self.results = json["results"] as! [[String : AnyObject]]
+             
+                self.performSelector(onMainThread: #selector(self.downloadImage), with: nil, waitUntilDone: true)
+                
+               // print(urlCall)
+                
+                
+         /*       let top3 = [results[0], results[1], results[2]]
+                
+                for result in top3 {
+                    
+                    
+                    
+                    /*place(name: result["name"] as! String,
+                          imageURL: <#T##URL#>,
+                          distance: <#T##String#>)*/
+                } */
+                
+                //print(results!)
+                
+            } catch {
+                print("cry! :( error serializing JSON: \(error)")
+            }
+            }
+
+            
+            task.resume()
+            
+
+
+            
+        }
+        else {
+         //not authorized, cry instead
+        }
+        
         
         // Do any additional setup after loading the view.
     }
+    
+    func downloadImage() {
+        let ref = (self.results[0]["photos"] as! [[String : AnyObject]])[0]["photo_reference"] as! String
+        
+        let urlCall = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=" + ref + "&key=AIzaSyCk-laMzz7nwobXmg3NHUCyg8PaAFe_Jrk"
+        
+        let imageURL = URL(string: urlCall);
+        var imageRequest = URLRequest(url: imageURL!)
+        imageRequest.httpMethod = "GET"
+        
+        let imageTask = URLSession.shared.dataTask(with: imageRequest) {
+            data, response, error in
+            
+            if error != nil {
+                print(error!.localizedDescription)
+                DispatchQueue.main.sync(execute: {
+                    print("cry network image")
+                })
+                
+                return
+            }
+            
+            if let imageData = data {
+                self.image = UIImage(data: imageData)!
+                self.performSelector(onMainThread: #selector(self.insertContent), with: nil, waitUntilDone: false)
+
+            }
+            else {
+                print("img no data")
+            }
+        }
+        
+        imageTask.resume()
+    }
+    
+    func insertContent() {
+        nearbyCaption.text = results[0]["name"]! as? String
+        nearbyImageView.image = image
+        //loadFirstPhotoForPlace(placeID: results[0]["id"]! as! String)
+    }
+    
+    /*
+    func loadFirstPhotoForPlace(placeID: String) {
+        GMSPlacesClient.shared().lookUpPhotos(forPlaceID: placeID) { (photos, error) -> Void in
+            if let error = error {
+                // TODO: handle the error.
+                print("Error: \(error)")
+            } else {
+                if let firstPhoto = photos?.results.first {
+                    self.loadImageForMetadata(photoMetadata: firstPhoto)
+                }
+                else {
+                    print("problem")
+                }
+            }
+        }
+    }
+    
+    func loadImageForMetadata(photoMetadata: GMSPlacePhotoMetadata) {
+        GMSPlacesClient.shared()
+            .loadPlacePhoto(photoMetadata, constrainedTo: nearbyImageView.bounds.size,
+                            scale: self.nearbyImageView.window!.screen.scale) { (photo, error) -> Void in
+                                if let error = error {
+                                    // TODO: handle the error.
+                                    print("Error: \(error)")
+                                } else {
+                                    self.nearbyImageView.image = photo;
+                                    //self.attributionTextView.attributedText = photoMetadata.attributions;
+                                }
+        }
+    }
+    
+    */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

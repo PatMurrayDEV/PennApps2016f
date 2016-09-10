@@ -7,10 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842459DB1D842B0500CCF60A /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459DA1D842B0500CCF60A /* GooglePlaces.framework */; };
+		842459DD1D842B1C00CCF60A /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459DC1D842B1C00CCF60A /* GoogleMapsBase.framework */; };
+		842459DF1D842BBB00CCF60A /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 842459DE1D842BBB00CCF60A /* GooglePlaces.bundle */; };
+		842459E11D842BE400CCF60A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459E01D842BE400CCF60A /* Accelerate.framework */; };
+		842459E31D842BEA00CCF60A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459E21D842BEA00CCF60A /* CoreData.framework */; };
+		842459E51D842BEF00CCF60A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459E41D842BEF00CCF60A /* CoreGraphics.framework */; };
+		842459E71D842BF900CCF60A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459E61D842BF900CCF60A /* CoreText.framework */; };
+		842459E91D842BFE00CCF60A /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459E81D842BFE00CCF60A /* GLKit.framework */; };
+		842459EB1D842C0200CCF60A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459EA1D842C0200CCF60A /* ImageIO.framework */; };
+		842459ED1D842C3F00CCF60A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459EC1D842C3F00CCF60A /* libc++.tbd */; };
+		842459EF1D842C4600CCF60A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459EE1D842C4600CCF60A /* libz.tbd */; };
+		842459F11D842C4A00CCF60A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459F01D842C4A00CCF60A /* OpenGLES.framework */; };
+		842459F31D842C4F00CCF60A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459F21D842C4F00CCF60A /* QuartzCore.framework */; };
+		842459F51D842C5400CCF60A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459F41D842C5400CCF60A /* SystemConfiguration.framework */; };
+		842459F71D842C5900CCF60A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842459F61D842C5900CCF60A /* UIKit.framework */; };
 		8456EBA61D83B27A00F37512 /* PostCheckin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456EBA51D83B27A00F37512 /* PostCheckin.storyboard */; };
 		8456EBA81D83B36000F37512 /* HPGettingReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456EBA71D83B36000F37512 /* HPGettingReadyViewController.swift */; };
 		8456EBAA1D83B75C00F37512 /* CheckMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456EBA91D83B75C00F37512 /* CheckMarkButton.swift */; };
 		8456EBAC1D83C54700F37512 /* HWDuringStayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456EBAB1D83C54700F37512 /* HWDuringStayViewController.swift */; };
+		84B4936F1D8472DF002DB3FA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B4936E1D8472DF002DB3FA /* CloudKit.framework */; };
 		CD07057B1D83AE7F000D3E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07057A1D83AE7F000D3E6C /* AppDelegate.swift */; };
 		CD0705801D83AE7F000D3E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD07057E1D83AE7F000D3E6C /* Main.storyboard */; };
 		CD0705821D83AE7F000D3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0705811D83AE7F000D3E6C /* Assets.xcassets */; };
@@ -23,10 +39,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		842459DA1D842B0500CCF60A /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlaces.framework; sourceTree = "<group>"; };
+		842459DC1D842B1C00CCF60A /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
+		842459DE1D842BBB00CCF60A /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = SOURCE_ROOT; };
+		842459E01D842BE400CCF60A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		842459E21D842BEA00CCF60A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		842459E41D842BEF00CCF60A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		842459E61D842BF900CCF60A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		842459E81D842BFE00CCF60A /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		842459EA1D842C0200CCF60A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		842459EC1D842C3F00CCF60A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		842459EE1D842C4600CCF60A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		842459F01D842C4A00CCF60A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		842459F21D842C4F00CCF60A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		842459F41D842C5400CCF60A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		842459F61D842C5900CCF60A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8456EBA51D83B27A00F37512 /* PostCheckin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PostCheckin.storyboard; path = ../PostCheckin.storyboard; sourceTree = "<group>"; };
 		8456EBA71D83B36000F37512 /* HPGettingReadyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPGettingReadyViewController.swift; sourceTree = "<group>"; };
 		8456EBA91D83B75C00F37512 /* CheckMarkButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMarkButton.swift; sourceTree = "<group>"; };
 		8456EBAB1D83C54700F37512 /* HWDuringStayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWDuringStayViewController.swift; sourceTree = "<group>"; };
+		84B4936D1D8472CF002DB3FA /* PennApps2016f.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PennApps2016f.entitlements; sourceTree = "<group>"; };
+		84B4936E1D8472DF002DB3FA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		CD0705771D83AE7F000D3E6C /* PennApps2016f.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennApps2016f.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD07057A1D83AE7F000D3E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD07057F1D83AE7F000D3E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,7 +78,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842459F71D842C5900CCF60A /* UIKit.framework in Frameworks */,
+				842459F51D842C5400CCF60A /* SystemConfiguration.framework in Frameworks */,
+				842459F31D842C4F00CCF60A /* QuartzCore.framework in Frameworks */,
+				842459F11D842C4A00CCF60A /* OpenGLES.framework in Frameworks */,
+				842459EF1D842C4600CCF60A /* libz.tbd in Frameworks */,
+				842459ED1D842C3F00CCF60A /* libc++.tbd in Frameworks */,
+				842459EB1D842C0200CCF60A /* ImageIO.framework in Frameworks */,
+				842459E91D842BFE00CCF60A /* GLKit.framework in Frameworks */,
+				842459E71D842BF900CCF60A /* CoreText.framework in Frameworks */,
+				84B4936F1D8472DF002DB3FA /* CloudKit.framework in Frameworks */,
 				CD6ECE401D83C5F800092608 /* CoreLocation.framework in Frameworks */,
+				842459E51D842BEF00CCF60A /* CoreGraphics.framework in Frameworks */,
+				842459E31D842BEA00CCF60A /* CoreData.framework in Frameworks */,
+				842459E11D842BE400CCF60A /* Accelerate.framework in Frameworks */,
+				842459DB1D842B0500CCF60A /* GooglePlaces.framework in Frameworks */,
+				842459DD1D842B1C00CCF60A /* GoogleMapsBase.framework in Frameworks */,
 				CD0705941D83BB64000D3E6C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +121,7 @@
 		CD0705791D83AE7F000D3E6C /* PennApps2016f */ = {
 			isa = PBXGroup;
 			children = (
+				84B4936D1D8472CF002DB3FA /* PennApps2016f.entitlements */,
 				CD07057A1D83AE7F000D3E6C /* AppDelegate.swift */,
 				CD07058E1D83B984000D3E6C /* PHWelcomeViewController.swift */,
 				CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */,
@@ -85,6 +134,7 @@
 				8456EBA91D83B75C00F37512 /* CheckMarkButton.swift */,
 				CD0705861D83AE7F000D3E6C /* Info.plist */,
 				CD07058C1D83B1CF000D3E6C /* HPButton.swift */,
+				842459DE1D842BBB00CCF60A /* GooglePlaces.bundle */,
 			);
 			path = PennApps2016f;
 			sourceTree = "<group>";
@@ -92,6 +142,21 @@
 		CD0705921D83BB64000D3E6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84B4936E1D8472DF002DB3FA /* CloudKit.framework */,
+				842459F61D842C5900CCF60A /* UIKit.framework */,
+				842459F41D842C5400CCF60A /* SystemConfiguration.framework */,
+				842459F21D842C4F00CCF60A /* QuartzCore.framework */,
+				842459F01D842C4A00CCF60A /* OpenGLES.framework */,
+				842459EE1D842C4600CCF60A /* libz.tbd */,
+				842459EC1D842C3F00CCF60A /* libc++.tbd */,
+				842459EA1D842C0200CCF60A /* ImageIO.framework */,
+				842459E81D842BFE00CCF60A /* GLKit.framework */,
+				842459E61D842BF900CCF60A /* CoreText.framework */,
+				842459E41D842BEF00CCF60A /* CoreGraphics.framework */,
+				842459E21D842BEA00CCF60A /* CoreData.framework */,
+				842459E01D842BE400CCF60A /* Accelerate.framework */,
+				842459DC1D842B1C00CCF60A /* GoogleMapsBase.framework */,
+				842459DA1D842B0500CCF60A /* GooglePlaces.framework */,
 				CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */,
 				CD0705931D83BB64000D3E6C /* MapKit.framework */,
 			);
@@ -130,11 +195,17 @@
 				TargetAttributes = {
 					CD0705761D83AE7F000D3E6C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = CC3KAA4FP8;
+						DevelopmentTeam = 899JT6PKT3;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -168,6 +239,7 @@
 				CD0705851D83AE7F000D3E6C /* LaunchScreen.storyboard in Resources */,
 				CD0705821D83AE7F000D3E6C /* Assets.xcassets in Resources */,
 				CD0705801D83AE7F000D3E6C /* Main.storyboard in Resources */,
+				842459DF1D842BBB00CCF60A /* GooglePlaces.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +252,6 @@
 			files = (
 				CD0705911D83B994000D3E6C /* PHCheckinViewController.swift in Sources */,
 				CD07058D1D83B1CF000D3E6C /* HPButton.swift in Sources */,
-				CD07057D1D83AE7F000D3E6C /* ViewController.swift in Sources */,
 				8456EBAA1D83B75C00F37512 /* CheckMarkButton.swift in Sources */,
 				8456EBAC1D83C54700F37512 /* HWDuringStayViewController.swift in Sources */,
 				8456EBA81D83B36000F37512 /* HPGettingReadyViewController.swift in Sources */,
@@ -254,6 +325,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -296,6 +368,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -306,10 +379,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CC3KAA4FP8;
+				CODE_SIGN_ENTITLEMENTS = PennApps2016f/PennApps2016f.entitlements;
+				DEVELOPMENT_TEAM = 899JT6PKT3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PennApps2016f/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.patmurraydev.PennApps2016f;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harrisonweinerman.frontdesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -319,10 +397,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CC3KAA4FP8;
+				CODE_SIGN_ENTITLEMENTS = PennApps2016f/PennApps2016f.entitlements;
+				DEVELOPMENT_TEAM = 899JT6PKT3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PennApps2016f/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.patmurraydev.PennApps2016f;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harrisonweinerman.frontdesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
