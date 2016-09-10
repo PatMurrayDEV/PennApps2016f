@@ -97,28 +97,13 @@ class PHWelcomeViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func button2Tapped(_ sender: AnyObject) {
-        
-        
-        self.callNumber(phoneNumber: "19732948935")
-        
-        
+        PHUtilities.callNumber(phoneNumber: "19732948935")
     }
     
     @IBAction func button3Tapped(_ sender: AnyObject) {
     }
     
     
-    
-    
-    
-    private func callNumber(phoneNumber:String) {
-        if let phoneCallURL:NSURL = NSURL(string: "tel://\(phoneNumber)") {
-            let application:UIApplication = UIApplication.shared
-            if (application.canOpenURL(phoneCallURL as URL)) {
-                application.openURL(phoneCallURL as URL);
-            }
-        }
-    }
     
     
     

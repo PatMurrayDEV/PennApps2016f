@@ -31,9 +31,14 @@ class PHCheckinViewController: UIViewController {
     
 
     @IBAction func button1Tapped(_ sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "PostCheckin", bundle: nil)
+        let controller = storyboard.instantiateInitialViewController()! as UIViewController
+        present(controller, animated: true, completion: nil)
     }
 
     @IBAction func button2Tapped(_ sender: AnyObject) {
+        PHUtilities.callNumber(phoneNumber: "19732948935")
+        
     }
     
     @IBAction func button3Tapped(_ sender: AnyObject) {
