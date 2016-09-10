@@ -364,7 +364,7 @@ Maria's Place</string>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="button2Tapped:" destination="ujl-ie-Rqq" eventType="touchUpInside" id="gUT-CY-3Du"/>
-                                    <segue destination="7qd-7F-Bzc" kind="show" id="EvC-Yd-1GQ"/>
+                                    <segue destination="7qd-7F-Bzc" kind="presentation" id="EvC-Yd-1GQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gd-Z6-sVk" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
@@ -430,11 +430,6 @@ Maria's Place</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a pic of the damage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTW-px-D4A">
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dse-8z-FOw" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="Rhd-4e-UXm"/>
@@ -500,17 +495,42 @@ Maria's Place</string>
                                     <action selector="button1Tapped:" destination="7qd-7F-Bzc" eventType="touchUpInside" id="Iz8-pi-D2X"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DoorBroken" translatesAutoresizingMaskIntoConstraints="NO" id="OXv-5t-3t5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="289" id="8Gf-4G-mCV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FadeToWhiteGradient" translatesAutoresizingMaskIntoConstraints="NO" id="B7W-9O-nOp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DkK-lY-76g"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a pic of the damage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTW-px-D4A">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="2l4-bd-Zqw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="B7W-9O-nOp" secondAttribute="trailing" id="57Y-is-ATH"/>
                             <constraint firstItem="Pgv-zV-vjL" firstAttribute="centerX" secondItem="gGc-1T-C3Z" secondAttribute="centerX" id="BmS-hy-avj"/>
                             <constraint firstItem="Dse-8z-FOw" firstAttribute="top" secondItem="UPc-Q1-tIb" secondAttribute="bottom" constant="8" id="N0z-nk-Iy3"/>
+                            <constraint firstItem="LTW-px-D4A" firstAttribute="centerX" secondItem="gGc-1T-C3Z" secondAttribute="centerX" id="Ojk-jz-Xsj"/>
+                            <constraint firstItem="B7W-9O-nOp" firstAttribute="leading" secondItem="gGc-1T-C3Z" secondAttribute="leading" id="QPg-SP-E9X"/>
+                            <constraint firstItem="OXv-5t-3t5" firstAttribute="top" secondItem="gGc-1T-C3Z" secondAttribute="top" id="SEz-Qe-q5E"/>
                             <constraint firstItem="McZ-jg-gRA" firstAttribute="top" secondItem="Dse-8z-FOw" secondAttribute="bottom" constant="20" id="SVc-tJ-6ll"/>
-                            <constraint firstItem="LTW-px-D4A" firstAttribute="top" secondItem="Hjb-fD-jwB" secondAttribute="bottom" constant="8" id="XMz-g6-qlC"/>
-                            <constraint firstItem="LTW-px-D4A" firstAttribute="trailing" secondItem="gGc-1T-C3Z" secondAttribute="trailingMargin" id="jEG-ym-suk"/>
+                            <constraint firstItem="OXv-5t-3t5" firstAttribute="leading" secondItem="gGc-1T-C3Z" secondAttribute="leading" id="TEB-Ph-B9h"/>
+                            <constraint firstItem="LTW-px-D4A" firstAttribute="centerY" secondItem="gGc-1T-C3Z" secondAttribute="centerY" id="YnE-ku-nAA"/>
+                            <constraint firstItem="LTW-px-D4A" firstAttribute="leading" secondItem="gGc-1T-C3Z" secondAttribute="leadingMargin" id="fDB-e5-Szq"/>
                             <constraint firstItem="Dse-8z-FOw" firstAttribute="centerX" secondItem="gGc-1T-C3Z" secondAttribute="centerX" id="jeh-vO-97A"/>
                             <constraint firstItem="UPc-Q1-tIb" firstAttribute="centerX" secondItem="gGc-1T-C3Z" secondAttribute="centerX" id="oG6-B9-aMF"/>
-                            <constraint firstItem="LTW-px-D4A" firstAttribute="leading" secondItem="gGc-1T-C3Z" secondAttribute="leadingMargin" id="uhc-pi-4sZ"/>
+                            <constraint firstItem="B7W-9O-nOp" firstAttribute="top" secondItem="Hjb-fD-jwB" secondAttribute="bottom" constant="169" id="opO-nz-pMd"/>
+                            <constraint firstItem="LTW-px-D4A" firstAttribute="trailing" secondItem="gGc-1T-C3Z" secondAttribute="trailingMargin" id="sYV-iH-OjG"/>
+                            <constraint firstAttribute="trailing" secondItem="OXv-5t-3t5" secondAttribute="trailing" id="tjy-kc-pcM"/>
                             <constraint firstItem="UPc-Q1-tIb" firstAttribute="top" secondItem="Pgv-zV-vjL" secondAttribute="bottom" constant="8" id="vA4-vP-lgs"/>
                         </constraints>
                     </view>
@@ -518,6 +538,7 @@ Maria's Place</string>
                         <outlet property="button1" destination="Dse-8z-FOw" id="2dB-E5-aZf"/>
                         <outlet property="button2" destination="UPc-Q1-tIb" id="x2M-fl-PPm"/>
                         <outlet property="button3" destination="Pgv-zV-vjL" id="CO7-a1-MX2"/>
+                        <outlet property="imageView" destination="OXv-5t-3t5" id="oBF-df-2KH"/>
                         <outlet property="topLabel" destination="LTW-px-D4A" id="z2T-jW-ZTy"/>
                     </connections>
                 </viewController>
@@ -631,6 +652,7 @@ Maria's Place</string>
         </scene>
     </scenes>
     <resources>
+        <image name="DoorBroken" width="1024" height="683"/>
         <image name="FadeToWhiteGradient" width="2" height="100"/>
         <image name="HouseArtwork" width="1280" height="960"/>
         <image name="camera" width="50" height="50"/>

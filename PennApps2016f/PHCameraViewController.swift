@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import AVKit
-import AVFoundation
 
-class PHCameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
+
+class PHCameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var topLabel: UILabel!
     
@@ -18,51 +17,27 @@ class PHCameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     @IBOutlet weak var button2: HPButton!
     @IBOutlet weak var button3: UIButton!
     
+    @IBOutlet weak var imageView: UIImageView!
     
-    var session: AVCaptureSession?
-    var stillImageOutput: AVCapturePhotoOutput?
-    var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    var image : UIImage? = UIImage()
+    
+    
+    let imagePicker: UIImagePickerController! = UIImagePickerController()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .green
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        session = AVCaptureSession()
-        session!.sessionPreset = AVCaptureSessionPresetHigh
-        let backCamera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
-        var error: NSError?
-        var input: AVCaptureDeviceInput!
-        do {
-            input = try AVCaptureDeviceInput(device: backCamera)
-        } catch let error1 as NSError {
-            error = error1
-            input = nil
-            print(error!.localizedDescription)
-        }
-        
-        if error == nil && session!.canAddInput(input) {
-            session!.addInput(input)
-            stillImageOutput = AVCapturePhotoOutput()
-//            stillImageOutput?.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
-            if session!.canAddOutput(stillImageOutput) {
-                session!.addOutput(stillImageOutput)
-                videoPreviewLayer = AVCaptureVideoPreviewLayer(session: session)
-                videoPreviewLayer!.videoGravity = AVLayerVideoGravityResizeAspect
-                videoPreviewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-                view.layer.insertSublayer(videoPreviewLayer!, at:0)
-                session!.startRunning()
-            }
-        }
-        
+        button1.isUserInteractionEnabled = false
+        button1.alpha = 0.4
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        videoPreviewLayer!.frame = view.bounds
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,55 +47,55 @@ class PHCameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     
 
     @IBAction func button1Tapped(_ sender: AnyObject) {
-        
+        if (UIImagePickerController.isSourceTypeAvailable(.camera)) {
+            if UIImagePickerController.availableCaptureModes(for: .rear) != nil {
+                imagePicker.allowsEditing = false
+                imagePicker.sourceType = .camera
+                imagePicker.cameraCaptureMode = .photo
+                imagePicker.delegate = self
+                present(imagePicker, animated: true, completion: {})
+            } else {
+                //                postAlert("Rear camera doesn't exist", message: "Application cannot access the camera.")
+            }
+        } else {
+            //            postAlert("Camera inaccessable", message: "Application cannot access the camera.")
+        }
         
     }
     
     @IBAction func button2Tapped(_ sender: AnyObject) {
-        //        PHUtilities.callNumber(phoneNumber: "19732948935")
+        dismiss(animated: true) {
+            
+        }
     }
     
     @IBAction func button3Tapped(_ sender: AnyObject) {
         
-        
-        
-        
     }
     
     
-    func takePhoto(){
-        
-        
-            
-        let connection = self.stillImageOutput?.connection(withMediaType: AVMediaTypeVideo)
-        
-        // update the video orientation to the device one
-        connection?.videoOrientation = AVCaptureVideoOrientation(rawValue: UIDevice.current.orientation.rawValue)!
-        
-        self.stillImageOutput.captureStillImageAsynchronouslyFromConnection(connection: connection) {
-            (imageDataSampleBuffer, error) -> Void in
-            
-            if error == nil {
-                
-                // if the session preset .Photo is used, or if explicitly set in the device's outputSettings
-                // we get the data already compressed as JPEG
-                
-                let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
-                
-                // the sample buffer also contains the metadata, in case we want to modify it
-                let metadata:NSDictionary = CMCopyDictionaryOfAttachments(nil, imageDataSampleBuffer, CMAttachmentMode(kCMAttachmentMode_ShouldPropagate)).takeUnretainedValue()
-                
-                if let image = UIImage(data: imageData) {
-                    // save the image or do something interesting with it
-                    
-                }
-            }
-            else {
-                NSLog("error while capturing still image: \(error)")
-            }
+    
+    //---------------------------
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        print("Got an image")
+        if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
+            UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
+            imageView.image = pickedImage
         }
-        
-        
+        imagePicker.dismiss(animated: true, completion: {
+            // Anything you want to happen when the user saves an image
+            self.button1.isUserInteractionEnabled = true
+            self.button1.alpha = 1.0
+        })
     }
-
+    
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("User canceled image")
+        dismiss(animated: true, completion: {
+            // Anything you want to happen when the user selects cancel
+        })
+    }
+    
 }
