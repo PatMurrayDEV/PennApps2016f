@@ -14,6 +14,8 @@
 		CD07058D1D83B1CF000D3E6C /* HPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07058C1D83B1CF000D3E6C /* HPButton.swift */; };
 		CD07058F1D83B984000D3E6C /* PHWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07058E1D83B984000D3E6C /* PHWelcomeViewController.swift */; };
 		CD0705911D83B994000D3E6C /* PHCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */; };
+		CD0705941D83BB64000D3E6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0705931D83BB64000D3E6C /* MapKit.framework */; };
+		CD6ECE401D83C5F800092608 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		CD07058C1D83B1CF000D3E6C /* HPButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPButton.swift; sourceTree = "<group>"; };
 		CD07058E1D83B984000D3E6C /* PHWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHWelcomeViewController.swift; sourceTree = "<group>"; };
 		CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PHCheckinViewController.swift; path = ../PHCheckinViewController.swift; sourceTree = "<group>"; };
+		CD0705931D83BB64000D3E6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6ECE401D83C5F800092608 /* CoreLocation.framework in Frameworks */,
+				CD0705941D83BB64000D3E6C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,7 @@
 			children = (
 				CD0705791D83AE7F000D3E6C /* PennApps2016f */,
 				CD0705781D83AE7F000D3E6C /* Products */,
+				CD0705921D83BB64000D3E6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +75,15 @@
 				CD07058C1D83B1CF000D3E6C /* HPButton.swift */,
 			);
 			path = PennApps2016f;
+			sourceTree = "<group>";
+		};
+		CD0705921D83BB64000D3E6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */,
+				CD0705931D83BB64000D3E6C /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +120,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = CC3KAA4FP8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -308,6 +329,7 @@
 				CD07058B1D83AE7F000D3E6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
