@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8456EBA61D83B27A00F37512 /* PostCheckin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456EBA51D83B27A00F37512 /* PostCheckin.storyboard */; };
+		8456EBA81D83B36000F37512 /* HPGettingReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456EBA71D83B36000F37512 /* HPGettingReadyViewController.swift */; };
+		8456EBAA1D83B75C00F37512 /* CheckMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456EBA91D83B75C00F37512 /* CheckMarkButton.swift */; };
+		8456EBAC1D83C54700F37512 /* HWDuringStayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456EBAB1D83C54700F37512 /* HWDuringStayViewController.swift */; };
 		CD07057B1D83AE7F000D3E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07057A1D83AE7F000D3E6C /* AppDelegate.swift */; };
 		CD0705801D83AE7F000D3E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD07057E1D83AE7F000D3E6C /* Main.storyboard */; };
 		CD0705821D83AE7F000D3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0705811D83AE7F000D3E6C /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8456EBA51D83B27A00F37512 /* PostCheckin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PostCheckin.storyboard; path = ../PostCheckin.storyboard; sourceTree = "<group>"; };
+		8456EBA71D83B36000F37512 /* HPGettingReadyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPGettingReadyViewController.swift; sourceTree = "<group>"; };
+		8456EBA91D83B75C00F37512 /* CheckMarkButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckMarkButton.swift; sourceTree = "<group>"; };
+		8456EBAB1D83C54700F37512 /* HWDuringStayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HWDuringStayViewController.swift; sourceTree = "<group>"; };
 		CD0705771D83AE7F000D3E6C /* PennApps2016f.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennApps2016f.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD07057A1D83AE7F000D3E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD07057F1D83AE7F000D3E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,8 +77,12 @@
 				CD07058E1D83B984000D3E6C /* PHWelcomeViewController.swift */,
 				CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */,
 				CD07057E1D83AE7F000D3E6C /* Main.storyboard */,
+				8456EBA51D83B27A00F37512 /* PostCheckin.storyboard */,
+				8456EBAB1D83C54700F37512 /* HWDuringStayViewController.swift */,
+				8456EBA71D83B36000F37512 /* HPGettingReadyViewController.swift */,
 				CD0705811D83AE7F000D3E6C /* Assets.xcassets */,
 				CD0705831D83AE7F000D3E6C /* LaunchScreen.storyboard */,
+				8456EBA91D83B75C00F37512 /* CheckMarkButton.swift */,
 				CD0705861D83AE7F000D3E6C /* Info.plist */,
 				CD07058C1D83B1CF000D3E6C /* HPButton.swift */,
 			);
@@ -119,6 +131,7 @@
 					CD0705761D83AE7F000D3E6C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = CC3KAA4FP8;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -151,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8456EBA61D83B27A00F37512 /* PostCheckin.storyboard in Resources */,
 				CD0705851D83AE7F000D3E6C /* LaunchScreen.storyboard in Resources */,
 				CD0705821D83AE7F000D3E6C /* Assets.xcassets in Resources */,
 				CD0705801D83AE7F000D3E6C /* Main.storyboard in Resources */,
@@ -166,6 +180,10 @@
 			files = (
 				CD0705911D83B994000D3E6C /* PHCheckinViewController.swift in Sources */,
 				CD07058D1D83B1CF000D3E6C /* HPButton.swift in Sources */,
+				CD07057D1D83AE7F000D3E6C /* ViewController.swift in Sources */,
+				8456EBAA1D83B75C00F37512 /* CheckMarkButton.swift in Sources */,
+				8456EBAC1D83C54700F37512 /* HWDuringStayViewController.swift in Sources */,
+				8456EBA81D83B36000F37512 /* HPGettingReadyViewController.swift in Sources */,
 				CD07057B1D83AE7F000D3E6C /* AppDelegate.swift in Sources */,
 				CD07058F1D83B984000D3E6C /* PHWelcomeViewController.swift in Sources */,
 			);
