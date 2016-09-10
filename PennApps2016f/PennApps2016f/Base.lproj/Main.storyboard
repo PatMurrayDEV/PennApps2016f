@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PHWelcomeViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Harrison Weinerman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvz-gJ-rv3">
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -28,6 +28,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="eDt-UK-1HU"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Order Lyft"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -40,15 +41,19 @@
                                         <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iVz-o0-uPu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EbY-5u-KHC" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="5gm-iF-SDX"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="SCa-Sw-sa6"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Contact Host"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -61,17 +66,24 @@
                                         <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button2Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsU-sd-o1W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flN-ne-jlz">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="R5A-TH-nhQ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Options">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="button3Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oeF-nK-uyb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -93,10 +105,129 @@
                             <constraint firstItem="n1X-7Z-GHg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zOq-e8-ffx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button1" destination="n1X-7Z-GHg" id="sol-hB-ACy"/>
+                        <outlet property="button2" destination="EbY-5u-KHC" id="a0k-qR-aQU"/>
+                        <outlet property="button3" destination="flN-ne-jlz" id="jLL-To-1hA"/>
+                        <outlet property="topLabel" destination="Lvz-gJ-rv3" id="Mlz-bX-86o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--Checkin View Controller-->
+        <scene sceneID="gpF-YK-sLE">
+            <objects>
+                <viewController id="ZBr-Gz-TFt" customClass="PHCheckinViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kyb-hK-YXl"/>
+                        <viewControllerLayoutGuide type="bottom" id="ylH-qv-7v2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3vb-pN-qcM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKJ-iM-c5V">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="I8r-2N-3wi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1C-QN-LtN"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuF-Hj-kEe" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="hYz-SZ-eGP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Check In"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button1Tapped:" destination="ZBr-Gz-TFt" eventType="touchDragInside" id="vzh-rU-dTH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAb-9M-ave">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="lhV-Bo-6Ea"/>
+                                </constraints>
+                                <state key="normal" title="Options">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button3Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="vIw-QU-gHH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nz-9j-laO" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="hPy-rP-yUO"/>
+                                </constraints>
+                                <state key="normal" title="Contact Host"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button2Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="mFd-d5-H55"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nuF-Hj-kEe" firstAttribute="top" secondItem="c1C-QN-LtN" secondAttribute="bottom" constant="8" id="1gl-Qy-fNf"/>
+                            <constraint firstItem="rAb-9M-ave" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="2KV-Sh-FQP"/>
+                            <constraint firstItem="qKJ-iM-c5V" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="51a-vy-Qlj"/>
+                            <constraint firstAttribute="trailing" secondItem="c1C-QN-LtN" secondAttribute="trailing" id="AZU-bu-kx9"/>
+                            <constraint firstItem="1Nz-9j-laO" firstAttribute="top" secondItem="nuF-Hj-kEe" secondAttribute="bottom" constant="8" id="Bxx-TZ-B2O"/>
+                            <constraint firstItem="nuF-Hj-kEe" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="E7z-xD-uAU"/>
+                            <constraint firstItem="rAb-9M-ave" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leadingMargin" id="GJ0-Yh-mYR"/>
+                            <constraint firstItem="qKJ-iM-c5V" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leadingMargin" id="Mng-sb-GDC"/>
+                            <constraint firstItem="nuF-Hj-kEe" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leadingMargin" id="OLm-DK-Z7I"/>
+                            <constraint firstItem="1Nz-9j-laO" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leadingMargin" id="Qqb-d4-dnZ"/>
+                            <constraint firstItem="rAb-9M-ave" firstAttribute="top" secondItem="1Nz-9j-laO" secondAttribute="bottom" constant="8" id="TUZ-Wc-XL6"/>
+                            <constraint firstItem="nuF-Hj-kEe" firstAttribute="top" secondItem="c1C-QN-LtN" secondAttribute="bottom" constant="8" id="WP1-dT-0z7"/>
+                            <constraint firstItem="ylH-qv-7v2" firstAttribute="top" secondItem="rAb-9M-ave" secondAttribute="bottom" constant="8" id="bqK-1h-ERL"/>
+                            <constraint firstItem="c1C-QN-LtN" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leading" id="jOX-zR-tUq"/>
+                            <constraint firstItem="1Nz-9j-laO" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="jWE-b0-14H"/>
+                            <constraint firstItem="qKJ-iM-c5V" firstAttribute="top" secondItem="kyb-hK-YXl" secondAttribute="bottom" id="r2B-sE-BCP"/>
+                            <constraint firstItem="c1C-QN-LtN" firstAttribute="top" secondItem="qKJ-iM-c5V" secondAttribute="bottom" constant="8" id="yIK-E9-hwH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="nuF-Hj-kEe" id="1yb-8o-OkD"/>
+                        <outlet property="button2" destination="1Nz-9j-laO" id="9Zc-ls-Hrd"/>
+                        <outlet property="button3" destination="rAb-9M-ave" id="nlU-U8-coy"/>
+                        <outlet property="mainImageView" destination="c1C-QN-LtN" id="6M6-o3-Ajw"/>
+                        <outlet property="welcomeLabel" destination="qKJ-iM-c5V" id="6Gj-5L-8Lb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAY-M3-KEF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816.79999999999995" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

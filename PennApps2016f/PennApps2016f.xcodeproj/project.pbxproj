@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		CD07057B1D83AE7F000D3E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07057A1D83AE7F000D3E6C /* AppDelegate.swift */; };
-		CD07057D1D83AE7F000D3E6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07057C1D83AE7F000D3E6C /* ViewController.swift */; };
 		CD0705801D83AE7F000D3E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD07057E1D83AE7F000D3E6C /* Main.storyboard */; };
 		CD0705821D83AE7F000D3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0705811D83AE7F000D3E6C /* Assets.xcassets */; };
 		CD0705851D83AE7F000D3E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0705831D83AE7F000D3E6C /* LaunchScreen.storyboard */; };
 		CD07058D1D83B1CF000D3E6C /* HPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07058C1D83B1CF000D3E6C /* HPButton.swift */; };
+		CD07058F1D83B984000D3E6C /* PHWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07058E1D83B984000D3E6C /* PHWelcomeViewController.swift */; };
+		CD0705911D83B994000D3E6C /* PHCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD0705771D83AE7F000D3E6C /* PennApps2016f.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PennApps2016f.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD07057A1D83AE7F000D3E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD07057C1D83AE7F000D3E6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD07057F1D83AE7F000D3E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD0705811D83AE7F000D3E6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0705841D83AE7F000D3E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD0705861D83AE7F000D3E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD07058C1D83B1CF000D3E6C /* HPButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPButton.swift; sourceTree = "<group>"; };
+		CD07058E1D83B984000D3E6C /* PHWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHWelcomeViewController.swift; sourceTree = "<group>"; };
+		CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PHCheckinViewController.swift; path = ../PHCheckinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				CD07057A1D83AE7F000D3E6C /* AppDelegate.swift */,
-				CD07057C1D83AE7F000D3E6C /* ViewController.swift */,
+				CD07058E1D83B984000D3E6C /* PHWelcomeViewController.swift */,
+				CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */,
 				CD07057E1D83AE7F000D3E6C /* Main.storyboard */,
 				CD0705811D83AE7F000D3E6C /* Assets.xcassets */,
 				CD0705831D83AE7F000D3E6C /* LaunchScreen.storyboard */,
@@ -140,9 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD07057D1D83AE7F000D3E6C /* ViewController.swift in Sources */,
+				CD0705911D83B994000D3E6C /* PHCheckinViewController.swift in Sources */,
 				CD07058D1D83B1CF000D3E6C /* HPButton.swift in Sources */,
 				CD07057B1D83AE7F000D3E6C /* AppDelegate.swift in Sources */,
+				CD07058F1D83B984000D3E6C /* PHWelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
