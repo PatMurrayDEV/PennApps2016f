@@ -51,7 +51,7 @@
                                         <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
                                         <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -104,7 +104,7 @@
                                     <constraint firstAttribute="height" constant="100" id="tk0-KU-UMM"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1125 West Somerset Street" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfE-lh-56d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="118 Maple Street" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfE-lh-56d">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="b7g-wt-oWw"/>
                                 </constraints>
@@ -203,6 +203,7 @@ Maria's Place</string>
                                 </state>
                                 <connections>
                                     <action selector="button3Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="vIw-QU-gHH"/>
+                                    <segue destination="ujl-ie-Rqq" kind="presentation" modalTransitionStyle="crossDissolve" id="5Uo-87-FHj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nz-9j-laO" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
@@ -253,7 +254,7 @@ Maria's Place</string>
                                         <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
                                         <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -277,9 +278,9 @@ Maria's Place</string>
                             <constraint firstAttribute="trailing" secondItem="c1C-QN-LtN" secondAttribute="trailing" id="V5y-GQ-5RY"/>
                             <constraint firstItem="ylH-qv-7v2" firstAttribute="top" secondItem="rAb-9M-ave" secondAttribute="bottom" constant="8" id="bqK-1h-ERL"/>
                             <constraint firstItem="qKJ-iM-c5V" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="ipr-gO-DKr"/>
-                            <constraint firstItem="1Nz-9j-laO" firstAttribute="top" secondItem="nuF-Hj-kEe" secondAttribute="bottom" constant="40" id="jPB-Ea-gfg"/>
+                            <constraint firstItem="1Nz-9j-laO" firstAttribute="top" secondItem="nuF-Hj-kEe" secondAttribute="bottom" constant="37" id="jPB-Ea-gfg"/>
                             <constraint firstItem="1Nz-9j-laO" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="jWE-b0-14H"/>
-                            <constraint firstItem="nuF-Hj-kEe" firstAttribute="top" secondItem="qKJ-iM-c5V" secondAttribute="bottom" constant="-1" id="n21-Km-LQb"/>
+                            <constraint firstItem="nuF-Hj-kEe" firstAttribute="top" secondItem="qKJ-iM-c5V" secondAttribute="bottom" constant="2" id="n21-Km-LQb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -294,9 +295,366 @@ Maria's Place</string>
             </objects>
             <point key="canvasLocation" x="816.79999999999995" y="137.18140929535232"/>
         </scene>
+        <!--Problems View Controller-->
+        <scene sceneID="7tu-p6-iB8">
+            <objects>
+                <viewController id="ujl-ie-Rqq" customClass="PHProblemsViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UVg-3O-JgG"/>
+                        <viewControllerLayoutGuide type="bottom" id="f3S-EJ-qZY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FZB-w4-a52">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are there any problems with the place?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsi-0J-q2N">
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SZ-aX-Mu9" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="9Kd-jf-0pw"/>
+                                    <constraint firstAttribute="width" constant="202" id="BkP-L2-onQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Nope! 🎉">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button1Tapped:" destination="ujl-ie-Rqq" eventType="touchDragInside" id="Iye-YL-UsW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cc1-Cy-HWB" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="PuI-Z1-9Y4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Report Problems"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button2Tapped:" destination="ujl-ie-Rqq" eventType="touchUpInside" id="gUT-CY-3Du"/>
+                                    <segue destination="7qd-7F-Bzc" kind="presentation" id="EvC-Yd-1GQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gd-Z6-sVk" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="yuS-d3-6JU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Remind me in 5 minutes"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button2Tapped:" destination="ujl-ie-Rqq" eventType="touchUpInside" id="rnN-S6-aNW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dsi-0J-q2N" firstAttribute="leading" secondItem="FZB-w4-a52" secondAttribute="leadingMargin" id="3I5-A0-xwU"/>
+                            <constraint firstItem="4Gd-Z6-sVk" firstAttribute="leading" secondItem="FZB-w4-a52" secondAttribute="leadingMargin" id="5wq-IO-sbh"/>
+                            <constraint firstItem="Cc1-Cy-HWB" firstAttribute="leading" secondItem="FZB-w4-a52" secondAttribute="leadingMargin" id="A56-UR-MgO"/>
+                            <constraint firstItem="dsi-0J-q2N" firstAttribute="top" secondItem="UVg-3O-JgG" secondAttribute="bottom" constant="8" id="CCt-O9-UfE"/>
+                            <constraint firstItem="4SZ-aX-Mu9" firstAttribute="top" secondItem="dsi-0J-q2N" secondAttribute="bottom" constant="8" id="QBT-O4-M2c"/>
+                            <constraint firstItem="4Gd-Z6-sVk" firstAttribute="trailing" secondItem="FZB-w4-a52" secondAttribute="trailingMargin" id="S4J-P1-fNT"/>
+                            <constraint firstItem="4SZ-aX-Mu9" firstAttribute="centerX" secondItem="FZB-w4-a52" secondAttribute="centerX" id="aTe-3J-ft4"/>
+                            <constraint firstItem="dsi-0J-q2N" firstAttribute="trailing" secondItem="FZB-w4-a52" secondAttribute="trailingMargin" id="eRG-Gs-n49"/>
+                            <constraint firstItem="4SZ-aX-Mu9" firstAttribute="centerY" secondItem="FZB-w4-a52" secondAttribute="centerY" id="n2f-rl-KLK"/>
+                            <constraint firstItem="Cc1-Cy-HWB" firstAttribute="trailing" secondItem="FZB-w4-a52" secondAttribute="trailingMargin" id="sVV-c9-JHR"/>
+                            <constraint firstItem="4Gd-Z6-sVk" firstAttribute="top" secondItem="4SZ-aX-Mu9" secondAttribute="bottom" constant="8" id="wUC-WA-srH"/>
+                            <constraint firstItem="f3S-EJ-qZY" firstAttribute="top" secondItem="Cc1-Cy-HWB" secondAttribute="bottom" constant="8" id="zXM-UK-CnG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="4SZ-aX-Mu9" id="hUf-ym-59s"/>
+                        <outlet property="button2" destination="Cc1-Cy-HWB" id="I5f-HG-ExD"/>
+                        <outlet property="topLabel" destination="dsi-0J-q2N" id="YPT-9r-aDc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OaY-te-BaF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1570" y="137"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="bhE-4D-B5d">
+            <objects>
+                <viewController id="7qd-7F-Bzc" customClass="PHCameraViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hjb-fD-jwB"/>
+                        <viewControllerLayoutGuide type="bottom" id="McZ-jg-gRA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gGc-1T-C3Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dse-8z-FOw" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Rhd-4e-UXm"/>
+                                    <constraint firstAttribute="width" constant="202" id="rca-q5-3Sz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button3Tapped:" destination="7qd-7F-Bzc" eventType="touchUpInside" id="64R-Z1-WdS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPc-Q1-tIb" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="WYi-sO-OUB"/>
+                                    <constraint firstAttribute="height" constant="64" id="Z9h-uE-hCB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cancel Report"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button2Tapped:" destination="7qd-7F-Bzc" eventType="touchUpInside" id="Tz1-xk-BN0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgv-zV-vjL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="CWP-8J-7D9"/>
+                                    <constraint firstAttribute="height" constant="95" id="Rf3-mI-nAi"/>
+                                </constraints>
+                                <state key="normal" image="camera"/>
+                                <connections>
+                                    <action selector="button1Tapped:" destination="7qd-7F-Bzc" eventType="touchUpInside" id="Iz8-pi-D2X"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DoorBroken" translatesAutoresizingMaskIntoConstraints="NO" id="OXv-5t-3t5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="289" id="8Gf-4G-mCV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FadeToWhiteGradient" translatesAutoresizingMaskIntoConstraints="NO" id="B7W-9O-nOp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DkK-lY-76g"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a pic of the damage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTW-px-D4A">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="2l4-bd-Zqw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="B7W-9O-nOp" secondAttribute="trailing" id="57Y-is-ATH"/>
+                            <constraint firstItem="Pgv-zV-vjL" firstAttribute="centerX" secondItem="gGc-1T-C3Z" secondAttribute="centerX" id="BmS-hy-avj"/>
+                            <constraint firstItem="Dse-8z-FOw" firstAttribute="top" secondItem="UPc-Q1-tIb" secondAttribute="bottom" constant="8" id="N0z-nk-Iy3"/>
+                            <constraint firstItem="LTW-px-D4A" firstAttribute="centerX" secondItem="gGc-1T-C3Z" secondAttribute="centerX" id="Ojk-jz-Xsj"/>
+                            <constraint firstItem="B7W-9O-nOp" firstAttribute="leading" secondItem="gGc-1T-C3Z" secondAttribute="leading" id="QPg-SP-E9X"/>
+                            <constraint firstItem="OXv-5t-3t5" firstAttribute="top" secondItem="gGc-1T-C3Z" secondAttribute="top" id="SEz-Qe-q5E"/>
+                            <constraint firstItem="McZ-jg-gRA" firstAttribute="top" secondItem="Dse-8z-FOw" secondAttribute="bottom" constant="20" id="SVc-tJ-6ll"/>
+                            <constraint firstItem="OXv-5t-3t5" firstAttribute="leading" secondItem="gGc-1T-C3Z" secondAttribute="leading" id="TEB-Ph-B9h"/>
+                            <constraint firstItem="LTW-px-D4A" firstAttribute="centerY" secondItem="gGc-1T-C3Z" secondAttribute="centerY" id="YnE-ku-nAA"/>
+                            <constraint firstItem="LTW-px-D4A" firstAttribute="leading" secondItem="gGc-1T-C3Z" secondAttribute="leadingMargin" id="fDB-e5-Szq"/>
+                            <constraint firstItem="Dse-8z-FOw" firstAttribute="centerX" secondItem="gGc-1T-C3Z" secondAttribute="centerX" id="jeh-vO-97A"/>
+                            <constraint firstItem="UPc-Q1-tIb" firstAttribute="centerX" secondItem="gGc-1T-C3Z" secondAttribute="centerX" id="oG6-B9-aMF"/>
+                            <constraint firstItem="B7W-9O-nOp" firstAttribute="top" secondItem="Hjb-fD-jwB" secondAttribute="bottom" constant="169" id="opO-nz-pMd"/>
+                            <constraint firstItem="LTW-px-D4A" firstAttribute="trailing" secondItem="gGc-1T-C3Z" secondAttribute="trailingMargin" id="sYV-iH-OjG"/>
+                            <constraint firstAttribute="trailing" secondItem="OXv-5t-3t5" secondAttribute="trailing" id="tjy-kc-pcM"/>
+                            <constraint firstItem="UPc-Q1-tIb" firstAttribute="top" secondItem="Pgv-zV-vjL" secondAttribute="bottom" constant="8" id="vA4-vP-lgs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="Dse-8z-FOw" id="2dB-E5-aZf"/>
+                        <outlet property="button2" destination="UPc-Q1-tIb" id="x2M-fl-PPm"/>
+                        <outlet property="button3" destination="Pgv-zV-vjL" id="CO7-a1-MX2"/>
+                        <outlet property="imageView" destination="OXv-5t-3t5" id="oBF-df-2KH"/>
+                        <outlet property="topLabel" destination="LTW-px-D4A" id="z2T-jW-ZTy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCr-55-DTz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2356" y="136.28185907046478"/>
+        </scene>
+        <!--Problems View Controller-->
+        <scene sceneID="w92-dG-Xd0">
+            <objects>
+                <viewController id="jgM-zE-OYm" customClass="PHProblemsViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Ff-0Y-4Yr"/>
+                        <viewControllerLayoutGuide type="bottom" id="UAj-1n-tc0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OTC-UX-8ye">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take some pics of the damage" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Es-Aw-4cb">
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3O-F4-yK1" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="6tC-Lu-wFd"/>
+                                    <constraint firstAttribute="height" constant="64" id="Gl5-qP-Jxd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button1Tapped:" destination="jgM-zE-OYm" eventType="touchDragInside" id="erI-Pr-oTb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPJ-gh-TlT" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="hoU-tk-Xh8"/>
+                                    <constraint firstAttribute="width" constant="202" id="z24-BV-n8P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cancel Report"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button2Tapped:" destination="jgM-zE-OYm" eventType="touchUpInside" id="wBb-f5-CN2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxG-hx-zHv">
+                                <frame key="frameInset" minX="135" minY="286" width="104" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="ckD-Jw-GX6"/>
+                                    <constraint firstAttribute="height" constant="95" id="oQX-Ur-4kI"/>
+                                </constraints>
+                                <state key="normal" image="camera"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lxG-hx-zHv" firstAttribute="centerX" secondItem="OTC-UX-8ye" secondAttribute="centerX" id="2um-NK-Xa2"/>
+                            <constraint firstItem="0Es-Aw-4cb" firstAttribute="top" secondItem="6Ff-0Y-4Yr" secondAttribute="bottom" constant="8" id="8x3-pg-Asy"/>
+                            <constraint firstItem="u3O-F4-yK1" firstAttribute="top" secondItem="dPJ-gh-TlT" secondAttribute="bottom" constant="8" id="GXd-LV-m8k"/>
+                            <constraint firstItem="dPJ-gh-TlT" firstAttribute="top" secondItem="lxG-hx-zHv" secondAttribute="bottom" constant="8" id="GZv-rd-Z9i"/>
+                            <constraint firstItem="0Es-Aw-4cb" firstAttribute="trailing" secondItem="OTC-UX-8ye" secondAttribute="trailingMargin" id="bhC-ow-0pT"/>
+                            <constraint firstItem="dPJ-gh-TlT" firstAttribute="centerX" secondItem="OTC-UX-8ye" secondAttribute="centerX" id="dsQ-nr-tgh"/>
+                            <constraint firstItem="0Es-Aw-4cb" firstAttribute="leading" secondItem="OTC-UX-8ye" secondAttribute="leadingMargin" id="ruC-4D-rSQ"/>
+                            <constraint firstItem="UAj-1n-tc0" firstAttribute="top" secondItem="u3O-F4-yK1" secondAttribute="bottom" constant="20" id="swU-2i-g2i"/>
+                            <constraint firstItem="u3O-F4-yK1" firstAttribute="centerX" secondItem="OTC-UX-8ye" secondAttribute="centerX" id="yGb-5z-y2h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="u3O-F4-yK1" id="CdL-fz-Ipf"/>
+                        <outlet property="button2" destination="dPJ-gh-TlT" id="xCq-g7-3OX"/>
+                        <outlet property="topLabel" destination="0Es-Aw-4cb" id="5d6-9b-2zn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aro-fB-D26" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3015" y="137"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="DoorBroken" width="1024" height="683"/>
         <image name="FadeToWhiteGradient" width="2" height="100"/>
         <image name="HouseArtwork" width="1280" height="960"/>
+        <image name="camera" width="50" height="50"/>
     </resources>
 </document>

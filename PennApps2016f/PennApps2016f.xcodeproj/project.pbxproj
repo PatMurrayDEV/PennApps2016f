@@ -36,6 +36,11 @@
 		CD0705911D83B994000D3E6C /* PHCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */; };
 		CD0705941D83BB64000D3E6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0705931D83BB64000D3E6C /* MapKit.framework */; };
 		CD6ECE401D83C5F800092608 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */; };
+		CD6ECE421D84244600092608 /* PHUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6ECE411D84244600092608 /* PHUtilities.swift */; };
+		CD6ECE871D84445100092608 /* PHProblemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6ECE861D84445100092608 /* PHProblemsViewController.swift */; };
+		CD7714DD1D844DA9005279EE /* PHCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7714DC1D844DA9005279EE /* PHCameraViewController.swift */; };
+		CD7714DF1D844E7D005279EE /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7714DE1D844E7D005279EE /* AVKit.framework */; };
+		CD7714E11D844EA9005279EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7714E01D844EA9005279EE /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +76,11 @@
 		CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PHCheckinViewController.swift; path = ../PHCheckinViewController.swift; sourceTree = "<group>"; };
 		CD0705931D83BB64000D3E6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CD6ECE411D84244600092608 /* PHUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHUtilities.swift; sourceTree = "<group>"; };
+		CD6ECE861D84445100092608 /* PHProblemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHProblemsViewController.swift; sourceTree = "<group>"; };
+		CD7714DC1D844DA9005279EE /* PHCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PHCameraViewController.swift; path = ../PHCameraViewController.swift; sourceTree = "<group>"; };
+		CD7714DE1D844E7D005279EE /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		CD7714E01D844EA9005279EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,8 @@
 				842459E91D842BFE00CCF60A /* GLKit.framework in Frameworks */,
 				842459E71D842BF900CCF60A /* CoreText.framework in Frameworks */,
 				84B4936F1D8472DF002DB3FA /* CloudKit.framework in Frameworks */,
+				CD7714E11D844EA9005279EE /* AVFoundation.framework in Frameworks */,
+				CD7714DF1D844E7D005279EE /* AVKit.framework in Frameworks */,
 				CD6ECE401D83C5F800092608 /* CoreLocation.framework in Frameworks */,
 				842459E51D842BEF00CCF60A /* CoreGraphics.framework in Frameworks */,
 				842459E31D842BEA00CCF60A /* CoreData.framework in Frameworks */,
@@ -123,15 +135,10 @@
 			children = (
 				84B4936D1D8472CF002DB3FA /* PennApps2016f.entitlements */,
 				CD07057A1D83AE7F000D3E6C /* AppDelegate.swift */,
-				CD07058E1D83B984000D3E6C /* PHWelcomeViewController.swift */,
-				CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */,
-				CD07057E1D83AE7F000D3E6C /* Main.storyboard */,
-				8456EBA51D83B27A00F37512 /* PostCheckin.storyboard */,
-				8456EBAB1D83C54700F37512 /* HWDuringStayViewController.swift */,
-				8456EBA71D83B36000F37512 /* HPGettingReadyViewController.swift */,
+				CD6ECE441D8425C900092608 /* Classes */,
+				CD6ECE431D8425BC00092608 /* Storyboards */,
 				CD0705811D83AE7F000D3E6C /* Assets.xcassets */,
 				CD0705831D83AE7F000D3E6C /* LaunchScreen.storyboard */,
-				8456EBA91D83B75C00F37512 /* CheckMarkButton.swift */,
 				CD0705861D83AE7F000D3E6C /* Info.plist */,
 				CD07058C1D83B1CF000D3E6C /* HPButton.swift */,
 				842459DE1D842BBB00CCF60A /* GooglePlaces.bundle */,
@@ -157,10 +164,61 @@
 				842459E01D842BE400CCF60A /* Accelerate.framework */,
 				842459DC1D842B1C00CCF60A /* GoogleMapsBase.framework */,
 				842459DA1D842B0500CCF60A /* GooglePlaces.framework */,
+				CD7714E01D844EA9005279EE /* AVFoundation.framework */,
+				CD7714DE1D844E7D005279EE /* AVKit.framework */,
 				CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */,
 				CD0705931D83BB64000D3E6C /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD6ECE431D8425BC00092608 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CD07057E1D83AE7F000D3E6C /* Main.storyboard */,
+				8456EBA51D83B27A00F37512 /* PostCheckin.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		CD6ECE441D8425C900092608 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CD6ECE461D8425D900092608 /* View Conrollers */,
+				CD6ECE471D8425E600092608 /* Utils */,
+				CD6ECE451D8425D200092608 /* Views */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		CD6ECE451D8425D200092608 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8456EBA91D83B75C00F37512 /* CheckMarkButton.swift */,
+				CD07058C1D83B1CF000D3E6C /* HPButton.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CD6ECE461D8425D900092608 /* View Conrollers */ = {
+			isa = PBXGroup;
+			children = (
+				CD7714DC1D844DA9005279EE /* PHCameraViewController.swift */,
+				CD07058E1D83B984000D3E6C /* PHWelcomeViewController.swift */,
+				CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */,
+				CD6ECE861D84445100092608 /* PHProblemsViewController.swift */,
+				8456EBAB1D83C54700F37512 /* HWDuringStayViewController.swift */,
+				8456EBA71D83B36000F37512 /* HPGettingReadyViewController.swift */,
+			);
+			name = "View Conrollers";
+			sourceTree = "<group>";
+		};
+		CD6ECE471D8425E600092608 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CD6ECE411D84244600092608 /* PHUtilities.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,13 +308,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6ECE421D84244600092608 /* PHUtilities.swift in Sources */,
 				CD0705911D83B994000D3E6C /* PHCheckinViewController.swift in Sources */,
 				CD07058D1D83B1CF000D3E6C /* HPButton.swift in Sources */,
 				8456EBAA1D83B75C00F37512 /* CheckMarkButton.swift in Sources */,
+				CD6ECE871D84445100092608 /* PHProblemsViewController.swift in Sources */,
 				8456EBAC1D83C54700F37512 /* HWDuringStayViewController.swift in Sources */,
 				8456EBA81D83B36000F37512 /* HPGettingReadyViewController.swift in Sources */,
 				CD07057B1D83AE7F000D3E6C /* AppDelegate.swift in Sources */,
 				CD07058F1D83B984000D3E6C /* PHWelcomeViewController.swift in Sources */,
+				CD7714DD1D844DA9005279EE /* PHCameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
