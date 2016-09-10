@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class HPGettingReadyViewController: UIViewController {
     @IBOutlet weak var dot1: UILabel!
@@ -111,7 +112,35 @@ class HPGettingReadyViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         animateDown()
-    
+        //let zoneID = CKRecordZoneID(zoneName: "defaultZone", ownerName: "owner")
+        let recordID = CKRecordID(recordName: "homeStatus")
+        let record = CKRecord(recordType: "home", recordID: recordID)
+        
+        record.setValue(true, forKey: "lightsOn")
+        record.setValue(false, forKey: "doorLocked")
+        record.setValue(true, forKey: "airConditioningOn")
+        
+        
+        let mod = CKModifyRecordsOperation(recordsToSave: [record], recordIDsToDelete: nil)
+        mod.savePolicy = .allKeys
+        mod.qualityOfService = .userInitiated
+        let db = CKContainer(identifier: "iCloud.com.harrisonweinerman.frontdesk").publicCloudDatabase
+
+        db.add(mod)
+        
+        /*
+        db.save(record) { (record, error) in
+            if error != nil {
+                print("error happened :(" + (error?.localizedDescription)!)
+                
+            }
+            else {
+            print("finished saving record")
+            }
+        }
+        */
+
+        
         
         UIView.animate(withDuration: 0.2,
                        delay: 1.0,

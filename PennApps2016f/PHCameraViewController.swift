@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CloudKit
 
 class PHCameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -80,6 +80,39 @@ class PHCameraViewController: UIViewController, UIImagePickerControllerDelegate,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         print("Got an image")
         if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
+            /*
+            let record = CKRecord(recordType: "ImageReport")
+          //  record.setValue(pickedImage, forKey: "image")
+            
+            let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory
+            let nsUserDomainMask = NSSearchPathDomainMask.UserDomainMask
+            if let paths = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true) {
+                if paths.count > 0 {
+                    if let dirPath = paths[0] as? String {
+                        let writePath = dirPath.stringByAppendingPathComponent("Image2.png")
+                        UIImagePNGRepresentation(ImageToSave).writeToFile(writePath, atomically: true)
+                        
+                        var File : CKAsset?  = CKAsset(fileURL: NSURL(fileURLWithPath: writePath))
+                        newRecord.setValue(File, forKey: "Image")
+                        
+                    }
+                }
+            }
+            
+            if let database = self.privateDatabase {
+                database.saveRecord(newRecord, completionHandler: { (record:CKRecord!, error:NSError! ) in
+                    if error != nil {
+                        NSLog(error.localizedDescription)
+                    } else {
+                        dispatch_async(dispatch_get_main_queue()) {
+                            println("finished")
+                        }
+                    }
+                })
+            }
+            
+ */
+            
             UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
             imageView.image = pickedImage
         }
