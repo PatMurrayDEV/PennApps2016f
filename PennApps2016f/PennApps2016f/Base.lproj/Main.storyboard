@@ -203,6 +203,7 @@ Maria's Place</string>
                                 </state>
                                 <connections>
                                     <action selector="button3Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="vIw-QU-gHH"/>
+                                    <segue destination="ujl-ie-Rqq" kind="presentation" modalTransitionStyle="crossDissolve" id="5Uo-87-FHj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nz-9j-laO" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
@@ -293,6 +294,101 @@ Maria's Place</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lAY-M3-KEF" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="816.79999999999995" y="137.18140929535232"/>
+        </scene>
+        <!--Checkin View Controller-->
+        <scene sceneID="7tu-p6-iB8">
+            <objects>
+                <viewController id="ujl-ie-Rqq" customClass="PHCheckinViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UVg-3O-JgG"/>
+                        <viewControllerLayoutGuide type="bottom" id="f3S-EJ-qZY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FZB-w4-a52">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are there any problems with the place?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsi-0J-q2N">
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SZ-aX-Mu9" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="9Kd-jf-0pw"/>
+                                    <constraint firstAttribute="width" constant="202" id="BkP-L2-onQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Nope! 🎉">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button1Tapped:" destination="ujl-ie-Rqq" eventType="touchDragInside" id="Iye-YL-UsW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cc1-Cy-HWB" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="PuI-Z1-9Y4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Report Problems"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button2Tapped:" destination="ujl-ie-Rqq" eventType="touchUpInside" id="gUT-CY-3Du"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dsi-0J-q2N" firstAttribute="leading" secondItem="FZB-w4-a52" secondAttribute="leadingMargin" id="3I5-A0-xwU"/>
+                            <constraint firstItem="Cc1-Cy-HWB" firstAttribute="leading" secondItem="FZB-w4-a52" secondAttribute="leadingMargin" id="A56-UR-MgO"/>
+                            <constraint firstItem="dsi-0J-q2N" firstAttribute="top" secondItem="UVg-3O-JgG" secondAttribute="bottom" constant="8" id="CCt-O9-UfE"/>
+                            <constraint firstItem="4SZ-aX-Mu9" firstAttribute="top" secondItem="dsi-0J-q2N" secondAttribute="bottom" constant="8" id="QBT-O4-M2c"/>
+                            <constraint firstItem="4SZ-aX-Mu9" firstAttribute="centerX" secondItem="FZB-w4-a52" secondAttribute="centerX" id="aTe-3J-ft4"/>
+                            <constraint firstItem="dsi-0J-q2N" firstAttribute="trailing" secondItem="FZB-w4-a52" secondAttribute="trailingMargin" id="eRG-Gs-n49"/>
+                            <constraint firstItem="4SZ-aX-Mu9" firstAttribute="centerY" secondItem="FZB-w4-a52" secondAttribute="centerY" id="n2f-rl-KLK"/>
+                            <constraint firstItem="Cc1-Cy-HWB" firstAttribute="trailing" secondItem="FZB-w4-a52" secondAttribute="trailingMargin" id="sVV-c9-JHR"/>
+                            <constraint firstItem="f3S-EJ-qZY" firstAttribute="top" secondItem="Cc1-Cy-HWB" secondAttribute="bottom" constant="8" id="zXM-UK-CnG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="4SZ-aX-Mu9" id="hUf-ym-59s"/>
+                        <outlet property="button2" destination="Cc1-Cy-HWB" id="I5f-HG-ExD"/>
+                        <outlet property="welcomeLabel" destination="dsi-0J-q2N" id="a4c-Ri-FfA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OaY-te-BaF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536.8" y="136.28185907046478"/>
         </scene>
     </scenes>
     <resources>
