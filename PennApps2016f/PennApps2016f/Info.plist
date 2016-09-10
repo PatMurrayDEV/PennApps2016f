@@ -30,6 +30,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>To documents problems with your stay</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>To checkin to the right place!</string>
 	<key>UILaunchStoryboardName</key>
