@@ -19,39 +19,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Harrison Weinerman" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvz-gJ-rv3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Harrison" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcW-Oc-l3a">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="3Gm-f9-fgS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1X-7Z-GHg" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4eV-Vg-GjG">
+                                <frame key="frameInset" width="375" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3Q-pK-VyE" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="eDt-UK-1HU"/>
+                                    <constraint firstAttribute="height" constant="77" id="DEb-Cb-Lff"/>
+                                    <constraint firstAttribute="width" constant="202" id="Iy6-DH-Syd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Order Lyft"/>
+                                <state key="normal" title="Get Lyft ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="button1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iVz-o0-uPu"/>
+                                    <action selector="button1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0G-Cd-RG2"/>
+                                    <action selector="button1Tapped:" destination="ZBr-Gz-TFt" eventType="touchDragInside" id="wik-7A-Bhg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EbY-5u-KHC" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOF-oL-28k">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="5gm-iF-SDX"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="SCa-Sw-sa6"/>
+                                    <constraint firstAttribute="height" constant="36" id="jbe-Ia-qno"/>
+                                </constraints>
+                                <state key="normal" title="Options">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="button3Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Rn-Lp-ila"/>
+                                    <action selector="button3Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="hdG-sb-ugi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-Iw-MoL" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="4s5-gl-ICI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Contact Host"/>
@@ -70,56 +95,73 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="button2Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsU-sd-o1W"/>
+                                    <action selector="button2Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="HCR-kw-R5y"/>
+                                    <action selector="button2Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iDK-gK-EX2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flN-ne-jlz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FadeToWhiteGradient" translatesAutoresizingMaskIntoConstraints="NO" id="Czf-3z-NNK">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="R5A-TH-nhQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="tk0-KU-UMM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Options">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="button3Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oeF-nK-uyb"/>
-                                </connections>
-                            </button>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1125 West Somerset Street" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfE-lh-56d">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="b7g-wt-oWw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Get to Maria's place to be able to check-in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAQ-XY-4Ea">
+                                <frame key="frameInset" minX="86" minY="514" width="202" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="ccJ-TG-Hbg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="n1X-7Z-GHg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0vK-Ab-rtq"/>
-                            <constraint firstItem="EbY-5u-KHC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4k7-QM-vPw"/>
-                            <constraint firstItem="EbY-5u-KHC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8is-eO-CSc"/>
-                            <constraint firstItem="EbY-5u-KHC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Clk-S1-1al"/>
-                            <constraint firstItem="flN-ne-jlz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="INe-G3-7rf"/>
-                            <constraint firstItem="n1X-7Z-GHg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kl4-b8-3oI"/>
-                            <constraint firstItem="flN-ne-jlz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="M76-1e-HFX"/>
-                            <constraint firstItem="Lvz-gJ-rv3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Mrf-An-oO8"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="flN-ne-jlz" secondAttribute="bottom" constant="20" id="T6P-PC-Gq6"/>
-                            <constraint firstItem="n1X-7Z-GHg" firstAttribute="top" secondItem="Lvz-gJ-rv3" secondAttribute="bottom" constant="8" id="XWO-tL-VSl"/>
-                            <constraint firstItem="Lvz-gJ-rv3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Zs7-lQ-08R"/>
-                            <constraint firstItem="n1X-7Z-GHg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="biB-vc-Tle"/>
-                            <constraint firstItem="Lvz-gJ-rv3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="d49-40-k9X"/>
-                            <constraint firstItem="EbY-5u-KHC" firstAttribute="top" secondItem="n1X-7Z-GHg" secondAttribute="bottom" constant="8" id="t6K-Be-evm"/>
-                            <constraint firstItem="n1X-7Z-GHg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zOq-e8-ffx"/>
+                            <constraint firstItem="Czf-3z-NNK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6W2-N2-VbE"/>
+                            <constraint firstItem="fAQ-XY-4Ea" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7U0-OY-THC"/>
+                            <constraint firstItem="BOF-oL-28k" firstAttribute="top" secondItem="bUe-Iw-MoL" secondAttribute="bottom" constant="8" id="AJS-GF-BBO"/>
+                            <constraint firstItem="bUe-Iw-MoL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Bpw-xU-wke"/>
+                            <constraint firstItem="DfE-lh-56d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="INa-hX-Twk"/>
+                            <constraint firstItem="YcW-Oc-l3a" firstAttribute="top" secondItem="Czf-3z-NNK" secondAttribute="bottom" constant="-1" id="Jlg-qu-Ik8"/>
+                            <constraint firstItem="fAQ-XY-4Ea" firstAttribute="top" secondItem="e3Q-pK-VyE" secondAttribute="bottom" id="LkC-LG-On1"/>
+                            <constraint firstItem="DfE-lh-56d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MeA-pr-pnT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BOF-oL-28k" secondAttribute="bottom" constant="8" id="Nwe-x3-NXe"/>
+                            <constraint firstItem="DfE-lh-56d" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UZU-rw-gRh"/>
+                            <constraint firstItem="e3Q-pK-VyE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V7g-Na-Z8w"/>
+                            <constraint firstItem="bUe-Iw-MoL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zkv-9g-S1y"/>
+                            <constraint firstAttribute="trailing" secondItem="Czf-3z-NNK" secondAttribute="trailing" id="djf-3e-Gtw"/>
+                            <constraint firstItem="e3Q-pK-VyE" firstAttribute="top" secondItem="YcW-Oc-l3a" secondAttribute="bottom" constant="-1" id="iT7-Rv-hgV"/>
+                            <constraint firstItem="BOF-oL-28k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lnP-iE-cnT"/>
+                            <constraint firstItem="YcW-Oc-l3a" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qvf-lC-ja2"/>
+                            <constraint firstItem="BOF-oL-28k" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="v7c-3Q-gb2"/>
+                            <constraint firstItem="bUe-Iw-MoL" firstAttribute="top" secondItem="e3Q-pK-VyE" secondAttribute="bottom" constant="37" id="xEI-5A-VYa"/>
+                            <constraint firstItem="BOF-oL-28k" firstAttribute="top" secondItem="bUe-Iw-MoL" secondAttribute="bottom" constant="8" id="xlw-xC-jB9"/>
+                            <constraint firstItem="YcW-Oc-l3a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xpy-BJ-aaK"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Fwq-rb-DFX" appends="YES" id="ylY-4I-fss"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="button1" destination="n1X-7Z-GHg" id="sol-hB-ACy"/>
-                        <outlet property="button2" destination="EbY-5u-KHC" id="a0k-qR-aQU"/>
-                        <outlet property="button3" destination="flN-ne-jlz" id="jLL-To-1hA"/>
-                        <outlet property="topLabel" destination="Lvz-gJ-rv3" id="Mlz-bX-86o"/>
+                        <outlet property="button1" destination="e3Q-pK-VyE" id="WXa-m6-a5I"/>
+                        <outlet property="button2" destination="bUe-Iw-MoL" id="tsa-Hy-ZVd"/>
+                        <outlet property="button3" destination="BOF-oL-28k" id="LGC-Un-PJy"/>
+                        <outlet property="mapView" destination="4eV-Vg-GjG" id="zxm-ZE-rlw"/>
+                        <outlet property="topLabel" destination="YcW-Oc-l3a" id="JDa-b4-UWx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="Fwq-rb-DFX">
+                <swipeGestureRecognizer direction="down" id="Fwq-rb-DFX">
                     <connections>
-                        <segue destination="ZBr-Gz-TFt" kind="show" id="nPc-kj-1Ea"/>
+                        <segue destination="ZBr-Gz-TFt" kind="presentation" modalTransitionStyle="crossDissolve" id="nPc-kj-1Ea"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -137,45 +179,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKJ-iM-c5V">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKJ-iM-c5V">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="I8r-2N-3wi"/>
+                                    <constraint firstAttribute="height" constant="147" id="q9V-El-v9e"/>
                                 </constraints>
+                                <string key="text">Welcome to
+Maria's Place</string>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1C-QN-LtN"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuF-Hj-kEe" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HouseArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="c1C-QN-LtN">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="118" id="hYz-SZ-eGP"/>
+                                    <constraint firstAttribute="height" constant="289" id="WbA-sd-DKC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Check In"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="button1Tapped:" destination="ZBr-Gz-TFt" eventType="touchDragInside" id="vzh-rU-dTH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAb-9M-ave">
+                            </imageView>
+                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAb-9M-ave">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="lhV-Bo-6Ea"/>
                                 </constraints>
                                 <state key="normal" title="Options">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="button3Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="vIw-QU-gHH"/>
@@ -186,7 +210,7 @@
                                     <constraint firstAttribute="height" constant="64" id="hPy-rP-yUO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Contact Host"/>
+                                <state key="normal" title="Contact Maria"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="0.0"/>
@@ -205,26 +229,57 @@
                                     <action selector="button2Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="mFd-d5-H55"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FadeToWhiteGradient" translatesAutoresizingMaskIntoConstraints="NO" id="5rN-ra-aHx">
+                                <frame key="frameInset" minY="189" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuF-Hj-kEe" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="pWg-IG-FWd"/>
+                                    <constraint firstAttribute="height" constant="77" id="y1t-ep-Thk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Check In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button1Tapped:" destination="ZBr-Gz-TFt" eventType="touchDragInside" id="vzh-rU-dTH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nuF-Hj-kEe" firstAttribute="top" secondItem="c1C-QN-LtN" secondAttribute="bottom" constant="8" id="1gl-Qy-fNf"/>
                             <constraint firstItem="rAb-9M-ave" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="2KV-Sh-FQP"/>
-                            <constraint firstItem="qKJ-iM-c5V" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="51a-vy-Qlj"/>
-                            <constraint firstAttribute="trailing" secondItem="c1C-QN-LtN" secondAttribute="trailing" id="AZU-bu-kx9"/>
-                            <constraint firstItem="1Nz-9j-laO" firstAttribute="top" secondItem="nuF-Hj-kEe" secondAttribute="bottom" constant="8" id="Bxx-TZ-B2O"/>
-                            <constraint firstItem="nuF-Hj-kEe" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="E7z-xD-uAU"/>
+                            <constraint firstItem="qKJ-iM-c5V" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leadingMargin" id="2dB-oR-1fp"/>
+                            <constraint firstItem="c1C-QN-LtN" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leading" id="Eyz-Qw-XRE"/>
                             <constraint firstItem="rAb-9M-ave" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leadingMargin" id="GJ0-Yh-mYR"/>
-                            <constraint firstItem="qKJ-iM-c5V" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leadingMargin" id="Mng-sb-GDC"/>
-                            <constraint firstItem="nuF-Hj-kEe" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leadingMargin" id="OLm-DK-Z7I"/>
+                            <constraint firstItem="c1C-QN-LtN" firstAttribute="top" secondItem="3vb-pN-qcM" secondAttribute="top" id="PAg-XX-z27"/>
                             <constraint firstItem="1Nz-9j-laO" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leadingMargin" id="Qqb-d4-dnZ"/>
+                            <constraint firstItem="nuF-Hj-kEe" firstAttribute="centerX" secondItem="3vb-pN-qcM" secondAttribute="centerX" id="Rjy-70-AN8"/>
                             <constraint firstItem="rAb-9M-ave" firstAttribute="top" secondItem="1Nz-9j-laO" secondAttribute="bottom" constant="8" id="TUZ-Wc-XL6"/>
-                            <constraint firstItem="nuF-Hj-kEe" firstAttribute="top" secondItem="c1C-QN-LtN" secondAttribute="bottom" constant="8" id="WP1-dT-0z7"/>
+                            <constraint firstAttribute="trailing" secondItem="c1C-QN-LtN" secondAttribute="trailing" id="V5y-GQ-5RY"/>
                             <constraint firstItem="ylH-qv-7v2" firstAttribute="top" secondItem="rAb-9M-ave" secondAttribute="bottom" constant="8" id="bqK-1h-ERL"/>
-                            <constraint firstItem="c1C-QN-LtN" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leading" id="jOX-zR-tUq"/>
+                            <constraint firstItem="qKJ-iM-c5V" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="ipr-gO-DKr"/>
+                            <constraint firstItem="1Nz-9j-laO" firstAttribute="top" secondItem="nuF-Hj-kEe" secondAttribute="bottom" constant="40" id="jPB-Ea-gfg"/>
                             <constraint firstItem="1Nz-9j-laO" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="jWE-b0-14H"/>
-                            <constraint firstItem="qKJ-iM-c5V" firstAttribute="top" secondItem="kyb-hK-YXl" secondAttribute="bottom" id="r2B-sE-BCP"/>
-                            <constraint firstItem="c1C-QN-LtN" firstAttribute="top" secondItem="qKJ-iM-c5V" secondAttribute="bottom" constant="8" id="yIK-E9-hwH"/>
+                            <constraint firstItem="nuF-Hj-kEe" firstAttribute="top" secondItem="qKJ-iM-c5V" secondAttribute="bottom" constant="-1" id="n21-Km-LQb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -240,4 +295,8 @@
             <point key="canvasLocation" x="816.79999999999995" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FadeToWhiteGradient" width="2" height="100"/>
+        <image name="HouseArtwork" width="1280" height="960"/>
+    </resources>
 </document>
