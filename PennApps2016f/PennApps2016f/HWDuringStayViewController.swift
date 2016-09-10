@@ -31,14 +31,18 @@ class HWDuringStayViewController: UIViewController, CLLocationManagerDelegate {
     
     var image = UIImage()
     
+    
+    var lat: String = ""
+    var long : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        contact.layer.cornerRadius = contact.frame.size.height / 2
-        contact.layer.masksToBounds = true
-        
-        change.layer.cornerRadius = contact.frame.size.height / 2
-        change.layer.masksToBounds = true
+//        contact.layer.cornerRadius = contact.frame.size.height / 2
+//        contact.layer.masksToBounds = true
+//        
+//        change.layer.cornerRadius = contact.frame.size.height / 2
+//        change.layer.masksToBounds = true
         
         locManager.delegate = self
         locManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -150,7 +154,20 @@ class HWDuringStayViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func insertContent() {
-        nearbyCaption.text = results[0]["name"]! as? String
+//        print(results)
+        if let name = results[0]["name"]! as? String {
+            nearbyCaption.text = "Visit \(name)"
+        }
+        print()
+        
+
+        
+        let geo = results[0]["geometry"] as! [String : AnyObject]
+        let coords = geo["location"] as! [String : AnyObject]
+        self.lat = String(coords["lat"] as! Double)
+        self.long = String(coords["lng"] as! Double)
+        
+        
         nearbyImageView.image = image
         //loadFirstPhotoForPlace(placeID: results[0]["id"]! as! String)
     }
@@ -193,7 +210,29 @@ class HWDuringStayViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    @IBAction func getLyftButtonTapped(_ sender: AnyObject) {
+        let myApp = UIApplication.shared
+        let lyftAppURL = NSURL(string: "lyft://ridetype?id=lyft_line&destination[latitude]=\(self.lat)&destination[longitude]=\(self.long)")!
+        if myApp.canOpenURL(lyftAppURL as URL) {
+            // Lyft is installed; launch it
+            myApp.openURL(lyftAppURL as URL)
+        } else {
+            // Lyft not installed; open App Store
+            let lyftAppStoreURL = NSURL(string: "https://itunes.apple.com/us/app/lyft-taxi-bus-app-alternative/id529379082")!
+            myApp.openURL(lyftAppStoreURL as URL)
+        }
 
+    }
+    
+
+    @IBAction func callHost(_ sender: AnyObject) {
+        PHUtilities.callNumber(phoneNumber: "19732948935")
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
