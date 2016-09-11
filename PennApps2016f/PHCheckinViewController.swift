@@ -31,6 +31,9 @@ class PHCheckinViewController: UIViewController {
     
 
     @IBAction func button1Tapped(_ sender: AnyObject) {
+        let timeStamp = NSDate().dateStringWithFormat(format: "Hmm a")
+        PHUtilities.smsNumber(phoneNumber: "19732948935", message: "Harrison checked in to your property at \(timeStamp)")
+
         let storyboard = UIStoryboard(name: "PostCheckin", bundle: nil)
         let controller = storyboard.instantiateInitialViewController()! as UIViewController
         present(controller, animated: true, completion: nil)
@@ -46,4 +49,13 @@ class PHCheckinViewController: UIViewController {
     
     
 
+}
+
+
+extension NSDate {
+    func dateStringWithFormat(format: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self as Date)
+    }
 }
