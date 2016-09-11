@@ -27,9 +27,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4eV-Vg-GjG">
-                                <frame key="frameInset" width="375" height="289"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4eV-Vg-GjG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="289" id="thZ-Lc-dpO"/>
+                                </constraints>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3Q-pK-VyE" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
                                 <constraints>
@@ -61,7 +62,7 @@
                                     <action selector="button1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0G-Cd-RG2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOF-oL-28k">
+                            <button hidden="YES" opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOF-oL-28k">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="jbe-Ia-qno"/>
                                 </constraints>
@@ -122,10 +123,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4eV-Vg-GjG" secondAttribute="trailing" id="14W-Fo-DvO"/>
                             <constraint firstItem="Czf-3z-NNK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6W2-N2-VbE"/>
                             <constraint firstItem="fAQ-XY-4Ea" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7U0-OY-THC"/>
                             <constraint firstItem="BOF-oL-28k" firstAttribute="top" secondItem="bUe-Iw-MoL" secondAttribute="bottom" constant="8" id="AJS-GF-BBO"/>
+                            <constraint firstItem="4eV-Vg-GjG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AwT-X9-cv5"/>
                             <constraint firstItem="bUe-Iw-MoL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Bpw-xU-wke"/>
+                            <constraint firstItem="4eV-Vg-GjG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="C3D-j6-mvH"/>
                             <constraint firstItem="DfE-lh-56d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="INa-hX-Twk"/>
                             <constraint firstItem="YcW-Oc-l3a" firstAttribute="top" secondItem="Czf-3z-NNK" secondAttribute="bottom" constant="-1" id="Jlg-qu-Ik8"/>
                             <constraint firstItem="fAQ-XY-4Ea" firstAttribute="top" secondItem="e3Q-pK-VyE" secondAttribute="bottom" id="LkC-LG-On1"/>
@@ -191,7 +195,7 @@ Maria's Place</string>
                                     <constraint firstAttribute="height" constant="289" id="WbA-sd-DKC"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAb-9M-ave">
+                            <button hidden="YES" opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAb-9M-ave">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="lhV-Bo-6Ea"/>
                                 </constraints>
@@ -226,9 +230,10 @@ Maria's Place</string>
                                     <action selector="button2Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="mFd-d5-H55"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FadeToWhiteGradient" translatesAutoresizingMaskIntoConstraints="NO" id="5rN-ra-aHx">
-                                <frame key="frameInset" minY="189" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FadeToWhiteGradient" translatesAutoresizingMaskIntoConstraints="NO" id="5rN-ra-aHx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="GFt-EN-eWb"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuF-Hj-kEe" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
                                 <constraints>
@@ -267,16 +272,19 @@ Maria's Place</string>
                             <constraint firstItem="qKJ-iM-c5V" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leadingMargin" id="2dB-oR-1fp"/>
                             <constraint firstItem="c1C-QN-LtN" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leading" id="Eyz-Qw-XRE"/>
                             <constraint firstItem="rAb-9M-ave" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leadingMargin" id="GJ0-Yh-mYR"/>
+                            <constraint firstAttribute="trailing" secondItem="5rN-ra-aHx" secondAttribute="trailing" id="IaN-kE-PoM"/>
                             <constraint firstItem="c1C-QN-LtN" firstAttribute="top" secondItem="3vb-pN-qcM" secondAttribute="top" id="PAg-XX-z27"/>
                             <constraint firstItem="1Nz-9j-laO" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leadingMargin" id="Qqb-d4-dnZ"/>
                             <constraint firstItem="nuF-Hj-kEe" firstAttribute="centerX" secondItem="3vb-pN-qcM" secondAttribute="centerX" id="Rjy-70-AN8"/>
                             <constraint firstItem="rAb-9M-ave" firstAttribute="top" secondItem="1Nz-9j-laO" secondAttribute="bottom" constant="8" id="TUZ-Wc-XL6"/>
+                            <constraint firstItem="5rN-ra-aHx" firstAttribute="leading" secondItem="3vb-pN-qcM" secondAttribute="leading" id="TZL-H5-eMt"/>
                             <constraint firstAttribute="trailing" secondItem="c1C-QN-LtN" secondAttribute="trailing" id="V5y-GQ-5RY"/>
                             <constraint firstItem="ylH-qv-7v2" firstAttribute="top" secondItem="rAb-9M-ave" secondAttribute="bottom" constant="8" id="bqK-1h-ERL"/>
                             <constraint firstItem="qKJ-iM-c5V" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="ipr-gO-DKr"/>
                             <constraint firstItem="1Nz-9j-laO" firstAttribute="top" secondItem="nuF-Hj-kEe" secondAttribute="bottom" constant="37" id="jPB-Ea-gfg"/>
                             <constraint firstItem="1Nz-9j-laO" firstAttribute="trailing" secondItem="3vb-pN-qcM" secondAttribute="trailingMargin" id="jWE-b0-14H"/>
                             <constraint firstItem="nuF-Hj-kEe" firstAttribute="top" secondItem="qKJ-iM-c5V" secondAttribute="bottom" constant="2" id="n21-Km-LQb"/>
+                            <constraint firstItem="5rN-ra-aHx" firstAttribute="top" secondItem="kyb-hK-YXl" secondAttribute="bottom" constant="169" id="zDo-yE-LDO"/>
                         </constraints>
                     </view>
                     <connections>
@@ -463,7 +471,7 @@ Maria's Place</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Un6-Ow-xlo" kind="presentation" id="mM1-X8-ryT"/>
+                                    <action selector="nextButtonTapped:" destination="7qd-7F-Bzc" eventType="touchUpInside" id="GKH-7a-rgI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPc-Q1-tIb" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
@@ -546,6 +554,7 @@ Maria's Place</string>
                         <outlet property="button3" destination="Pgv-zV-vjL" id="CO7-a1-MX2"/>
                         <outlet property="imageView" destination="OXv-5t-3t5" id="oBF-df-2KH"/>
                         <outlet property="topLabel" destination="LTW-px-D4A" id="z2T-jW-ZTy"/>
+                        <segue destination="Un6-Ow-xlo" kind="presentation" identifier="checkinsegueid" id="tI0-7W-Um6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCr-55-DTz" sceneMemberID="firstResponder"/>
@@ -680,6 +689,6 @@ Maria's Place</string>
         <image name="camera" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sS4-kg-GbY"/>
+        <segue reference="4Ir-af-Dc9"/>
     </inferredMetricsTieBreakers>
 </document>

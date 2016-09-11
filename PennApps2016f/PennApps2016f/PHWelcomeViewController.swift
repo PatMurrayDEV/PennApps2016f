@@ -21,7 +21,7 @@ class PHWelcomeViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    let manager = CLLocationManager()
+    //let manager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
