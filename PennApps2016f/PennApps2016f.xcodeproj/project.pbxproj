@@ -40,7 +40,6 @@
 		CD4E2F971D852D1600BDB303 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4E2F961D852D1600BDB303 /* Messages.framework */; };
 		CD4E2F991D8538D000BDB303 /* PHCheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E2F981D8538D000BDB303 /* PHCheckOutViewController.swift */; };
 		CD4E2F9B1D853A6A00BDB303 /* PHFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E2F9A1D853A6A00BDB303 /* PHFinalViewController.swift */; };
-		CD4E2F9D1D855D0400BDB303 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD4E2F9C1D855D0400BDB303 /* Settings.bundle */; };
 		CD6ECE401D83C5F800092608 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */; };
 		CD6ECE421D84244600092608 /* PHUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6ECE411D84244600092608 /* PHUtilities.swift */; };
 		CD6ECE871D84445100092608 /* PHProblemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6ECE861D84445100092608 /* PHProblemsViewController.swift */; };
@@ -86,7 +85,6 @@
 		CD4E2F961D852D1600BDB303 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		CD4E2F981D8538D000BDB303 /* PHCheckOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHCheckOutViewController.swift; sourceTree = "<group>"; };
 		CD4E2F9A1D853A6A00BDB303 /* PHFinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHFinalViewController.swift; sourceTree = "<group>"; };
-		CD4E2F9C1D855D0400BDB303 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CD6ECE411D84244600092608 /* PHUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHUtilities.swift; sourceTree = "<group>"; };
 		CD6ECE861D84445100092608 /* PHProblemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHProblemsViewController.swift; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 			children = (
 				CD07057A1D83AE7F000D3E6C /* AppDelegate.swift */,
 				CD6ECE411D84244600092608 /* PHUtilities.swift */,
-				CD4E2F9C1D855D0400BDB303 /* Settings.bundle */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -318,7 +315,6 @@
 				CD0705821D83AE7F000D3E6C /* Assets.xcassets in Resources */,
 				CD0705801D83AE7F000D3E6C /* Main.storyboard in Resources */,
 				842459DF1D842BBB00CCF60A /* GooglePlaces.bundle in Resources */,
-				CD4E2F9D1D855D0400BDB303 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
