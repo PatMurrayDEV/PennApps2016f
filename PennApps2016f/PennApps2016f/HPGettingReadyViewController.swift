@@ -199,7 +199,7 @@ class HPGettingReadyViewController: UIViewController {
             self.doorCheckmark.showAnimation = true
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.performSegue(withIdentifier: "checkDamageSegue", sender: self)
         }
     }

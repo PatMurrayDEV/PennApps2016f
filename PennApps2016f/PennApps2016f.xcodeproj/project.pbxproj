@@ -146,13 +146,11 @@
 			isa = PBXGroup;
 			children = (
 				84B4936D1D8472CF002DB3FA /* PennApps2016f.entitlements */,
-				CD07057A1D83AE7F000D3E6C /* AppDelegate.swift */,
 				CD6ECE441D8425C900092608 /* Classes */,
 				CD6ECE431D8425BC00092608 /* Storyboards */,
 				CD0705811D83AE7F000D3E6C /* Assets.xcassets */,
 				CD0705831D83AE7F000D3E6C /* LaunchScreen.storyboard */,
 				CD0705861D83AE7F000D3E6C /* Info.plist */,
-				CD07058C1D83B1CF000D3E6C /* HPButton.swift */,
 				842459DE1D842BBB00CCF60A /* GooglePlaces.bundle */,
 			);
 			path = PennApps2016f;
@@ -209,6 +207,7 @@
 		CD6ECE451D8425D200092608 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD07058C1D83B1CF000D3E6C /* HPButton.swift */,
 				8456EBA91D83B75C00F37512 /* CheckMarkButton.swift */,
 			);
 			name = Views;
@@ -232,6 +231,7 @@
 		CD6ECE471D8425E600092608 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CD07057A1D83AE7F000D3E6C /* AppDelegate.swift */,
 				CD6ECE411D84244600092608 /* PHUtilities.swift */,
 			);
 			name = Utils;
