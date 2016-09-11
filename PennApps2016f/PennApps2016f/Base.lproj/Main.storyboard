@@ -159,7 +159,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="down" id="Fwq-rb-DFX">
+                <swipeGestureRecognizer direction="down" numberOfTouchesRequired="2" id="Fwq-rb-DFX">
                     <connections>
                         <segue destination="ZBr-Gz-TFt" kind="presentation" modalTransitionStyle="crossDissolve" id="nPc-kj-1Ea"/>
                     </connections>
@@ -261,7 +261,7 @@ Maria's Place</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="button1Tapped:" destination="ZBr-Gz-TFt" eventType="touchDragInside" id="vzh-rU-dTH"/>
+                                    <action selector="button1Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="cW1-bI-oUC"/>
                                 </connections>
                             </button>
                         </subviews>
