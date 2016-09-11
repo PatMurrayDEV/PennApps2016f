@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jtf-K6-58W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jtf-K6-58W">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,83 +21,136 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60P-01-Jdx">
-                                <frame key="frameInset" minX="16" minY="28" width="343" height="181"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60P-01-Jdx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="181" id="Edl-pA-Rmj"/>
+                                </constraints>
                                 <string key="text">Getting your 
 place ready</string>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofi-3F-Bip">
-                                <frame key="frameInset" minX="35" minY="188" width="54" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofi-3F-Bip">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="IQb-jH-8pY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruN-bI-ol2">
-                                <frame key="frameInset" minX="157" minY="189" width="54" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruN-bI-ol2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="XL3-en-INL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHv-kZ-L4s">
-                                <frame key="frameInset" minX="285" minY="188" width="54" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHv-kZ-L4s">
                                 <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notifying your host" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wm-q5-vzQ">
-                                <frame key="frameInset" minX="35" minY="361" width="255" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifying your host" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wm-q5-vzQ">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Turning on the lights" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXQ-Ff-4iT">
-                                <frame key="frameInset" minX="35" minY="420" width="255" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turning on the lights" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXQ-Ff-4iT">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unlocking the door" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEi-gq-Ekc">
-                                <frame key="frameInset" minX="35" minY="479" width="255" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting the temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEi-gq-Ekc">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All set!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMK-6T-mNb">
-                                <frame key="frameInset" minX="60" minY="561" width="255" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All set!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMK-6T-mNb">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1e-Hj-yXc" customClass="CheckMarkButton" customModule="PennApps2016f" customModuleProvider="target">
-                                <frame key="frameInset" minX="298" minY="362" width="46" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1e-Hj-yXc" customClass="CheckMarkButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="mgA-7L-Iui"/>
+                                    <constraint firstAttribute="height" constant="48" id="xcz-B9-nVt"/>
+                                </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWN-cJ-vGu" customClass="CheckMarkButton" customModule="PennApps2016f" customModuleProvider="target">
-                                <frame key="frameInset" minX="298" minY="421" width="46" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWN-cJ-vGu" customClass="CheckMarkButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="dHp-i5-DZd"/>
+                                </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRj-RL-fzg" customClass="CheckMarkButton" customModule="PennApps2016f" customModuleProvider="target">
-                                <frame key="frameInset" minX="298" minY="480" width="46" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRj-RL-fzg" customClass="CheckMarkButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="CVX-Wf-ojd"/>
+                                </constraints>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlocking the door" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrC-Fj-Csz">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIj-Hn-S6N" customClass="CheckMarkButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="HA2-Te-nhs"/>
+                                </constraints>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fMK-6T-mNb" firstAttribute="top" secondItem="HrC-Fj-Csz" secondAttribute="bottom" constant="6" id="0NH-6i-dt9"/>
+                            <constraint firstItem="60P-01-Jdx" firstAttribute="top" secondItem="59C-Ji-joy" secondAttribute="bottom" constant="8" symbolic="YES" id="1LX-TM-BSM"/>
+                            <constraint firstItem="u1e-Hj-yXc" firstAttribute="top" secondItem="xHv-kZ-L4s" secondAttribute="bottom" constant="87" id="2vl-Oa-HcT"/>
+                            <constraint firstItem="kWN-cJ-vGu" firstAttribute="trailing" secondItem="aRj-RL-fzg" secondAttribute="trailing" id="65d-sd-DPm"/>
+                            <constraint firstItem="ruN-bI-ol2" firstAttribute="top" secondItem="59C-Ji-joy" secondAttribute="bottom" constant="169" id="77i-Gi-IKc"/>
+                            <constraint firstItem="nXQ-Ff-4iT" firstAttribute="leading" secondItem="BEi-gq-Ekc" secondAttribute="leading" id="7fv-Lw-zj0"/>
+                            <constraint firstItem="0Wm-q5-vzQ" firstAttribute="centerY" secondItem="u1e-Hj-yXc" secondAttribute="centerY" id="8cf-Gz-3LK"/>
+                            <constraint firstItem="aRj-RL-fzg" firstAttribute="leading" secondItem="BEi-gq-Ekc" secondAttribute="trailing" constant="8" symbolic="YES" id="93I-UO-sD3"/>
+                            <constraint firstItem="ofi-3F-Bip" firstAttribute="top" secondItem="59C-Ji-joy" secondAttribute="bottom" constant="168" id="95D-7a-TKC"/>
+                            <constraint firstItem="nXQ-Ff-4iT" firstAttribute="top" secondItem="0Wm-q5-vzQ" secondAttribute="bottom" constant="8" symbolic="YES" id="Bd8-CD-4Eg"/>
+                            <constraint firstItem="60P-01-Jdx" firstAttribute="centerX" secondItem="fMK-6T-mNb" secondAttribute="centerX" id="Cq6-Wn-xjs"/>
+                            <constraint firstItem="HrC-Fj-Csz" firstAttribute="top" secondItem="BEi-gq-Ekc" secondAttribute="bottom" constant="9" id="FD6-io-TOw"/>
+                            <constraint firstItem="aRj-RL-fzg" firstAttribute="leading" secondItem="bIj-Hn-S6N" secondAttribute="leading" id="JdK-P1-ohp"/>
+                            <constraint firstItem="0Wm-q5-vzQ" firstAttribute="top" secondItem="ofi-3F-Bip" secondAttribute="bottom" constant="86" id="NEg-zm-lS6"/>
+                            <constraint firstItem="ruN-bI-ol2" firstAttribute="leading" secondItem="ofi-3F-Bip" secondAttribute="trailing" constant="68" id="OUK-Pv-zmO"/>
+                            <constraint firstItem="ofi-3F-Bip" firstAttribute="leading" secondItem="Jqq-iI-ftA" secondAttribute="leadingMargin" constant="19" id="OoC-CJ-0Re"/>
+                            <constraint firstItem="bIj-Hn-S6N" firstAttribute="top" secondItem="aRj-RL-fzg" secondAttribute="bottom" constant="14" id="OzW-Vs-GdK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u1e-Hj-yXc" secondAttribute="trailing" constant="15" id="SOG-vY-0a0"/>
+                            <constraint firstItem="nXQ-Ff-4iT" firstAttribute="centerY" secondItem="kWN-cJ-vGu" secondAttribute="centerY" id="TVC-Ae-dH7"/>
+                            <constraint firstItem="ofi-3F-Bip" firstAttribute="firstBaseline" secondItem="xHv-kZ-L4s" secondAttribute="firstBaseline" id="UJ8-JU-MqX"/>
+                            <constraint firstItem="BEi-gq-Ekc" firstAttribute="top" secondItem="nXQ-Ff-4iT" secondAttribute="bottom" constant="8" symbolic="YES" id="Uen-2Z-YfI"/>
+                            <constraint firstItem="60P-01-Jdx" firstAttribute="leading" secondItem="Jqq-iI-ftA" secondAttribute="leadingMargin" id="Xh1-Qk-SQU"/>
+                            <constraint firstItem="aRj-RL-fzg" firstAttribute="trailing" secondItem="bIj-Hn-S6N" secondAttribute="trailing" id="Y6e-rR-5CG"/>
+                            <constraint firstAttribute="bottom" secondItem="fMK-6T-mNb" secondAttribute="bottom" constant="20" symbolic="YES" id="YWe-G3-6vn"/>
+                            <constraint firstItem="ofi-3F-Bip" firstAttribute="leading" secondItem="0Wm-q5-vzQ" secondAttribute="leading" id="cSg-EA-dy4"/>
+                            <constraint firstItem="0Wm-q5-vzQ" firstAttribute="leading" secondItem="nXQ-Ff-4iT" secondAttribute="leading" id="clb-oK-U3K"/>
+                            <constraint firstItem="aRj-RL-fzg" firstAttribute="top" secondItem="kWN-cJ-vGu" secondAttribute="bottom" constant="11" id="drG-wd-E4Y"/>
+                            <constraint firstItem="fMK-6T-mNb" firstAttribute="leading" secondItem="Jqq-iI-ftA" secondAttribute="leadingMargin" constant="44" id="dsy-vG-EnD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xHv-kZ-L4s" secondAttribute="trailing" constant="20" id="gfE-t3-Ggb"/>
+                            <constraint firstItem="kWN-cJ-vGu" firstAttribute="leading" secondItem="aRj-RL-fzg" secondAttribute="leading" id="hcn-9z-7we"/>
+                            <constraint firstItem="BEi-gq-Ekc" firstAttribute="leading" secondItem="HrC-Fj-Csz" secondAttribute="leading" id="hdC-zz-zeJ"/>
+                            <constraint firstItem="60P-01-Jdx" firstAttribute="trailing" secondItem="Jqq-iI-ftA" secondAttribute="trailingMargin" id="jzz-64-v4c"/>
+                            <constraint firstItem="kWN-cJ-vGu" firstAttribute="leading" secondItem="nXQ-Ff-4iT" secondAttribute="trailing" constant="8" symbolic="YES" id="os3-hL-0A2"/>
+                            <constraint firstItem="ofi-3F-Bip" firstAttribute="baseline" secondItem="ruN-bI-ol2" secondAttribute="firstBaseline" id="pps-nu-5Ab"/>
+                            <constraint firstItem="HrC-Fj-Csz" firstAttribute="bottom" secondItem="bIj-Hn-S6N" secondAttribute="bottom" id="qrg-gF-pA4"/>
+                            <constraint firstItem="u1e-Hj-yXc" firstAttribute="leading" secondItem="0Wm-q5-vzQ" secondAttribute="trailing" constant="8" symbolic="YES" id="vM3-4g-Qnt"/>
+                            <constraint firstItem="0Wm-q5-vzQ" firstAttribute="top" secondItem="ruN-bI-ol2" secondAttribute="bottom" constant="85" id="vVV-Y8-qb7"/>
+                            <constraint firstItem="u1e-Hj-yXc" firstAttribute="leading" secondItem="kWN-cJ-vGu" secondAttribute="leading" id="w6X-gd-qYs"/>
+                            <constraint firstItem="ofi-3F-Bip" firstAttribute="baseline" secondItem="xHv-kZ-L4s" secondAttribute="baseline" id="wwF-MS-QcE"/>
+                            <constraint firstItem="BEi-gq-Ekc" firstAttribute="centerY" secondItem="aRj-RL-fzg" secondAttribute="centerY" id="xV7-h9-NOI"/>
+                            <constraint firstItem="xHv-kZ-L4s" firstAttribute="leading" secondItem="ruN-bI-ol2" secondAttribute="trailing" constant="74" id="y5v-U8-if0"/>
+                            <constraint firstItem="bIj-Hn-S6N" firstAttribute="leading" secondItem="HrC-Fj-Csz" secondAttribute="trailing" constant="8" symbolic="YES" id="yd8-Gh-Ye6"/>
+                            <constraint firstItem="kWN-cJ-vGu" firstAttribute="top" secondItem="u1e-Hj-yXc" secondAttribute="bottom" constant="11" id="yiJ-lw-RRh"/>
+                            <constraint firstItem="u1e-Hj-yXc" firstAttribute="trailing" secondItem="kWN-cJ-vGu" secondAttribute="trailing" id="yja-2d-TCO"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="allSet" destination="fMK-6T-mNb" id="MZ3-FY-aof"/>
-                        <outlet property="doorCheckmark" destination="aRj-RL-fzg" id="NP4-cN-Y78"/>
-                        <outlet property="doorLabel" destination="BEi-gq-Ekc" id="vQi-ws-krr"/>
+                        <outlet property="doorCheckmark" destination="bIj-Hn-S6N" id="do3-Mh-MCd"/>
+                        <outlet property="doorLabel" destination="HrC-Fj-Csz" id="4ca-f3-NGg"/>
                         <outlet property="dot1" destination="ofi-3F-Bip" id="ZQL-vF-g1o"/>
                         <outlet property="dot2" destination="ruN-bI-ol2" id="iRD-ab-8Hr"/>
                         <outlet property="dot3" destination="xHv-kZ-L4s" id="LYN-3k-Wdq"/>
@@ -103,6 +158,8 @@ place ready</string>
                         <outlet property="hostLabel" destination="0Wm-q5-vzQ" id="XCE-Th-W6M"/>
                         <outlet property="lightCheckmark" destination="kWN-cJ-vGu" id="ovm-Pz-AI2"/>
                         <outlet property="lightsLabel" destination="nXQ-Ff-4iT" id="XAc-m0-21y"/>
+                        <outlet property="tempCheckmark" destination="aRj-RL-fzg" id="uC3-Hs-j8J"/>
+                        <outlet property="tempLabel" destination="BEi-gq-Ekc" id="pnR-iE-VzD"/>
                         <segue destination="F2O-jn-4BR" kind="presentation" identifier="checkDamageSegue" id="Bbe-zh-Qbx"/>
                     </connections>
                 </viewController>

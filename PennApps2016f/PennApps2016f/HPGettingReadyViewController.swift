@@ -17,6 +17,8 @@ class HPGettingReadyViewController: UIViewController {
     @IBOutlet weak var hostCheckmark: CheckMarkButton!
     @IBOutlet weak var lightCheckmark: CheckMarkButton!
     @IBOutlet weak var doorCheckmark: CheckMarkButton!
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var tempCheckmark: CheckMarkButton!
     
     @IBOutlet weak var hostLabel: UILabel!
     
@@ -36,15 +38,20 @@ class HPGettingReadyViewController: UIViewController {
         self.doorCheckmark.showAnimation = false
         self.lightCheckmark.showAnimation = false
         self.hostCheckmark.showAnimation = false
-        
+        self.tempCheckmark.showAnimation = false
+
         self.doorCheckmark.isHidden = true
         self.lightCheckmark.isHidden = true
         self.hostCheckmark.isHidden = true
+        self.tempCheckmark.isHidden = true
         
         hostLabel.alpha = 0
         lightsLabel.alpha = 0
         doorLabel.alpha = 0
-        self.allSet.alpha = 0
+        allSet.alpha = 0
+        tempLabel.alpha = 0
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -145,7 +152,7 @@ class HPGettingReadyViewController: UIViewController {
         
         
         UIView.animate(withDuration: 0.2,
-                       delay: 1.0,
+                       delay: 1,
                        options: UIViewAnimationOptions.curveEaseInOut,
                        animations: {
                         
@@ -155,7 +162,7 @@ class HPGettingReadyViewController: UIViewController {
         })
         
         UIView.animate(withDuration: 0.2,
-                       delay: 2.3,
+                       delay: 2,
                        options: UIViewAnimationOptions.curveEaseInOut,
                        animations: {
                         
@@ -165,7 +172,17 @@ class HPGettingReadyViewController: UIViewController {
         })
         
         UIView.animate(withDuration: 0.2,
-                       delay: 3.6,
+                       delay: 3,
+                       options: UIViewAnimationOptions.curveEaseInOut,
+                       animations: {
+                        
+                        self.tempLabel.alpha = 1
+                        self.tempCheckmark.showAnimation = true
+                        
+        })
+        
+        UIView.animate(withDuration: 0.2,
+                       delay: 4,
                        options: UIViewAnimationOptions.curveEaseInOut,
                        animations: {
                         
@@ -175,7 +192,7 @@ class HPGettingReadyViewController: UIViewController {
         })
         
         UIView.animate(withDuration: 0.2,
-                       delay: 4,
+                       delay: 5,
                        options: UIViewAnimationOptions.autoreverse,
                        animations: {
                         self.allSet.alpha = 1
@@ -189,19 +206,27 @@ class HPGettingReadyViewController: UIViewController {
             self.hostCheckmark.showAnimation = true
  
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.3) {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.lightCheckmark.isHidden = false
             self.lightCheckmark.showAnimation = true
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.tempCheckmark.isHidden = false
+            self.tempCheckmark.showAnimation = true
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
             self.doorCheckmark.isHidden = false
             self.doorCheckmark.showAnimation = true
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.5) {
             self.performSegue(withIdentifier: "checkDamageSegue", sender: self)
         }
+        
+        
     }
 
     /*
