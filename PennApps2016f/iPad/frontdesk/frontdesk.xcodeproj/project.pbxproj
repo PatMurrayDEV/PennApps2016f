@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840D1E5A1D84BF2300D33938 /* house.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 840D1E591D84BF2300D33938 /* house.jpg */; };
+		840D1E5C1D84BF6300D33938 /* houseLights.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 840D1E5B1D84BF6300D33938 /* houseLights.jpg */; };
+		84554B131D84C8A300AEC2F1 /* padlock-closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 84554B111D84C8A300AEC2F1 /* padlock-closed.png */; };
+		84554B141D84C8A300AEC2F1 /* padlock-open.png in Resources */ = {isa = PBXBuildFile; fileRef = 84554B121D84C8A300AEC2F1 /* padlock-open.png */; };
 		84B4937D1D849E0C002DB3FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4937C1D849E0C002DB3FA /* AppDelegate.swift */; };
 		84B4937F1D849E0C002DB3FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4937E1D849E0C002DB3FA /* ViewController.swift */; };
 		84B493821D849E0C002DB3FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B493801D849E0C002DB3FA /* Main.storyboard */; };
 		84B493841D849E0C002DB3FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B493831D849E0C002DB3FA /* Assets.xcassets */; };
 		84B493871D849E0C002DB3FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B493851D849E0C002DB3FA /* LaunchScreen.storyboard */; };
+		84B493911D849E42002DB3FA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B493901D849E42002DB3FA /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840D1E591D84BF2300D33938 /* house.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = house.jpg; path = ../../../../../house.jpg; sourceTree = "<group>"; };
+		840D1E5B1D84BF6300D33938 /* houseLights.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = houseLights.jpg; path = ../../../../../houseLights.jpg; sourceTree = "<group>"; };
+		84554B111D84C8A300AEC2F1 /* padlock-closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "padlock-closed.png"; path = "../../../../../../Downloads/padlock-closed.png"; sourceTree = "<group>"; };
+		84554B121D84C8A300AEC2F1 /* padlock-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "padlock-open.png"; path = "../../../../../../Downloads/padlock-open.png"; sourceTree = "<group>"; };
 		84B493791D849E0C002DB3FA /* frontdesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frontdesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B4937C1D849E0C002DB3FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B4937E1D849E0C002DB3FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,8 @@
 		84B493831D849E0C002DB3FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B493861D849E0C002DB3FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84B493881D849E0C002DB3FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B4938E1D849E3C002DB3FA /* frontdesk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = frontdesk.entitlements; sourceTree = "<group>"; };
+		84B493901D849E42002DB3FA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B493911D849E42002DB3FA /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +52,7 @@
 			children = (
 				84B4937B1D849E0C002DB3FA /* frontdesk */,
 				84B4937A1D849E0C002DB3FA /* Products */,
+				84B4938F1D849E42002DB3FA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +67,27 @@
 		84B4937B1D849E0C002DB3FA /* frontdesk */ = {
 			isa = PBXGroup;
 			children = (
+				84B4938E1D849E3C002DB3FA /* frontdesk.entitlements */,
 				84B4937C1D849E0C002DB3FA /* AppDelegate.swift */,
 				84B4937E1D849E0C002DB3FA /* ViewController.swift */,
+				84554B111D84C8A300AEC2F1 /* padlock-closed.png */,
+				84554B121D84C8A300AEC2F1 /* padlock-open.png */,
+				840D1E591D84BF2300D33938 /* house.jpg */,
 				84B493801D849E0C002DB3FA /* Main.storyboard */,
+				840D1E5B1D84BF6300D33938 /* houseLights.jpg */,
 				84B493831D849E0C002DB3FA /* Assets.xcassets */,
 				84B493851D849E0C002DB3FA /* LaunchScreen.storyboard */,
 				84B493881D849E0C002DB3FA /* Info.plist */,
 			);
 			path = frontdesk;
+			sourceTree = "<group>";
+		};
+		84B4938F1D849E42002DB3FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84B493901D849E42002DB3FA /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +124,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 899JT6PKT3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,8 +158,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840D1E5A1D84BF2300D33938 /* house.jpg in Resources */,
 				84B493871D849E0C002DB3FA /* LaunchScreen.storyboard in Resources */,
+				84554B131D84C8A300AEC2F1 /* padlock-closed.png in Resources */,
+				84554B141D84C8A300AEC2F1 /* padlock-open.png in Resources */,
 				84B493841D849E0C002DB3FA /* Assets.xcassets in Resources */,
+				840D1E5C1D84BF6300D33938 /* houseLights.jpg in Resources */,
 				84B493821D849E0C002DB3FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,10 +299,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = frontdesk/frontdesk.entitlements;
 				DEVELOPMENT_TEAM = 899JT6PKT3;
 				INFOPLIST_FILE = frontdesk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hmwtech.frontdesk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harrisonweinerman.frontdesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -274,10 +313,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = frontdesk/frontdesk.entitlements;
 				DEVELOPMENT_TEAM = 899JT6PKT3;
 				INFOPLIST_FILE = frontdesk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hmwtech.frontdesk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harrisonweinerman.frontdesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -302,6 +342,7 @@
 				84B4938D1D849E0C002DB3FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
