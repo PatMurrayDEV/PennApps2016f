@@ -38,7 +38,7 @@ class PHUtilities: NSObject {
             
         }
         
-        task.resume()
+   //     task.resume()
 
         
         

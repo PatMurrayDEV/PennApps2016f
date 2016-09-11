@@ -16,7 +16,7 @@ struct place {
     var distance : String
 }
 
-class HWDuringStayViewController: UIViewController, CLLocationManagerDelegate {
+class HWDuringStayViewController: UIViewController {
     
     @IBOutlet weak var contact: UIButton!
     
@@ -24,8 +24,6 @@ class HWDuringStayViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var nearbyImageView: UIImageView!
     @IBOutlet weak var nearbyCaption: UILabel!
-    
-    var locManager = CLLocationManager()
     
     var results : [[String : AnyObject]] = []
     
@@ -44,17 +42,17 @@ class HWDuringStayViewController: UIViewController, CLLocationManagerDelegate {
 //        change.layer.cornerRadius = contact.frame.size.height / 2
 //        change.layer.masksToBounds = true
         
-        locManager.delegate = self
-        locManager.desiredAccuracy = kCLLocationAccuracyBest
-        locManager.requestWhenInUseAuthorization()
-        locManager.startMonitoringSignificantLocationChanges()
+      //  locManager.delegate = self
+      //  locManager.desiredAccuracy = kCLLocationAccuracyBest
+      //  locManager.requestWhenInUseAuthorization()
+      //  locManager.startMonitoringSignificantLocationChanges()
         
         // Check if the user allowed authorization
-        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways)
-        {
+       // if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
+         //   CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways)
+        //{
             
-            let search = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + "\(locManager.location!.coordinate.latitude)" + "," + "\(locManager.location!.coordinate.longitude)" + "&radius=500&type=restaurant&key=AIzaSyCk-laMzz7nwobXmg3NHUCyg8PaAFe_Jrk"
+            let search = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.995168,-75.149842&radius=500&type=restaurant&key=AIzaSyCk-laMzz7nwobXmg3NHUCyg8PaAFe_Jrk"
 
             
             let searchURL = URL(string: search);
@@ -110,10 +108,10 @@ class HWDuringStayViewController: UIViewController, CLLocationManagerDelegate {
 
 
             
-        }
-        else {
+        //}
+        //else {
          //not authorized, cry instead
-        }
+        //}
         
         
         // Do any additional setup after loading the view.

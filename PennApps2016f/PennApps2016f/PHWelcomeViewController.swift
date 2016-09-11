@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class PHWelcomeViewController: UIViewController, CLLocationManagerDelegate {
+class PHWelcomeViewController: UIViewController {
     
     
     @IBOutlet weak var topLabel: UILabel!
@@ -25,7 +25,7 @@ class PHWelcomeViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        manager.delegate = self
+       // manager.delegate = self
         // Do any additional setup after loading the view.
         zoomToRegion()
     }
@@ -49,7 +49,7 @@ class PHWelcomeViewController: UIViewController, CLLocationManagerDelegate {
     
     
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+   /* func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             print("Found user's location: \(location)")
             
@@ -69,7 +69,7 @@ class PHWelcomeViewController: UIViewController, CLLocationManagerDelegate {
 
             
         }
-    }
+    } */
     
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
