@@ -68,13 +68,26 @@ class PHFinalViewController: UIViewController {
         mod.qualityOfService = .userInitiated
         let db = CKContainer(identifier: "iCloud.com.harrisonweinerman.frontdesk").publicCloudDatabase
         
+        mod.modifyRecordsCompletionBlock = { saved, deleted, error in
+            if error != nil {
+                print("error trynna modify")
+            }
+            else {
+            print("done resetting CK records")
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let controller = storyboard.instantiateInitialViewController()! as UIViewController
+                    self.present(controller, animated: true, completion: nil)
+                }
+            }
+        }
+        
         db.add(mod)
 
         
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateInitialViewController()! as UIViewController
-        present(controller, animated: true, completion: nil)
+
     }
     
     
