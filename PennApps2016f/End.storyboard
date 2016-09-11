@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6aY-oB-lsC">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Checkin View Controller-->
+        <scene sceneID="rfZ-Oo-Bfa">
+            <objects>
+                <viewController storyboardIdentifier="checkOutVC" id="6aY-oB-lsC" customClass="PHCheckinViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yZV-dT-4OG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vqc-1g-w1M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jDF-rt-8ZB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for staying at Maria's Place" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzg-bq-3EX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="QFg-qb-Wvh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HouseArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="Gqs-7c-oqW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="289" id="exR-Eb-JhX"/>
+                                </constraints>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwI-Z7-65W">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="c3v-7s-VPR"/>
+                                </constraints>
+                                <state key="normal" title="Options">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="button3Tapped:" destination="6aY-oB-lsC" eventType="touchUpInside" id="iSB-UO-i2k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nc-I4-7TE" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Q28-sL-sX6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Contact Maria"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button2Tapped:" destination="6aY-oB-lsC" eventType="touchUpInside" id="Z0b-gg-isJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FadeToWhiteGradient" translatesAutoresizingMaskIntoConstraints="NO" id="4rh-ik-mxN">
+                                <frame key="frameInset" minY="189" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohl-Wf-tOX" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="IDP-BR-P0E"/>
+                                    <constraint firstAttribute="height" constant="77" id="Ok0-7Q-aBl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Check Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button1Tapped:" destination="6aY-oB-lsC" eventType="touchUpInside" id="EGP-9A-c2t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gqs-7c-oqW" firstAttribute="leading" secondItem="jDF-rt-8ZB" secondAttribute="leading" id="3pM-9j-Pj8"/>
+                            <constraint firstItem="8Nc-I4-7TE" firstAttribute="trailing" secondItem="jDF-rt-8ZB" secondAttribute="trailingMargin" id="6VX-OG-50N"/>
+                            <constraint firstItem="ohl-Wf-tOX" firstAttribute="top" secondItem="Mzg-bq-3EX" secondAttribute="bottom" constant="2" id="Dbr-mV-h7M"/>
+                            <constraint firstItem="Mzg-bq-3EX" firstAttribute="leading" secondItem="jDF-rt-8ZB" secondAttribute="leadingMargin" id="G4v-fF-dKL"/>
+                            <constraint firstItem="8Nc-I4-7TE" firstAttribute="top" secondItem="ohl-Wf-tOX" secondAttribute="bottom" constant="37" id="Gnr-3A-qwu"/>
+                            <constraint firstAttribute="trailing" secondItem="Gqs-7c-oqW" secondAttribute="trailing" id="Tlw-mu-3bv"/>
+                            <constraint firstItem="Mzg-bq-3EX" firstAttribute="trailing" secondItem="jDF-rt-8ZB" secondAttribute="trailingMargin" id="YVk-IX-onp"/>
+                            <constraint firstItem="Vqc-1g-w1M" firstAttribute="top" secondItem="fwI-Z7-65W" secondAttribute="bottom" constant="8" id="YfR-fw-NzM"/>
+                            <constraint firstItem="fwI-Z7-65W" firstAttribute="trailing" secondItem="jDF-rt-8ZB" secondAttribute="trailingMargin" id="ZFm-R8-aeO"/>
+                            <constraint firstItem="8Nc-I4-7TE" firstAttribute="leading" secondItem="jDF-rt-8ZB" secondAttribute="leadingMargin" id="cwN-8q-45A"/>
+                            <constraint firstItem="fwI-Z7-65W" firstAttribute="leading" secondItem="jDF-rt-8ZB" secondAttribute="leadingMargin" id="dbX-OT-FtW"/>
+                            <constraint firstItem="fwI-Z7-65W" firstAttribute="top" secondItem="8Nc-I4-7TE" secondAttribute="bottom" constant="8" id="jZd-sw-0xf"/>
+                            <constraint firstItem="ohl-Wf-tOX" firstAttribute="centerX" secondItem="jDF-rt-8ZB" secondAttribute="centerX" id="lUo-rX-iRk"/>
+                            <constraint firstItem="Gqs-7c-oqW" firstAttribute="top" secondItem="jDF-rt-8ZB" secondAttribute="top" id="ozi-0h-ubq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="ohl-Wf-tOX" id="mLX-Zj-K3w"/>
+                        <outlet property="button2" destination="8Nc-I4-7TE" id="4Pp-d5-IXc"/>
+                        <outlet property="button3" destination="fwI-Z7-65W" id="fLm-Yh-ztl"/>
+                        <outlet property="mainImageView" destination="Gqs-7c-oqW" id="V76-4H-I9z"/>
+                        <outlet property="welcomeLabel" destination="Mzg-bq-3EX" id="cEO-R7-boz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybW-6U-xM6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="90"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FadeToWhiteGradient" width="2" height="100"/>
+        <image name="HouseArtwork" width="1280" height="960"/>
+    </resources>
+</document>

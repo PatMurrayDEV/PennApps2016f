@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jtf-K6-58W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jtf-K6-58W">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -213,6 +213,7 @@ place ready</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="u8Z-2J-R5i" firstAttribute="top" secondItem="K7F-jx-JJh" secondAttribute="bottom" constant="8" id="5cg-4k-oK3"/>
                             <constraint firstItem="K7F-jx-JJh" firstAttribute="top" secondItem="mxU-Mq-NVa" secondAttribute="bottom" constant="8" id="8dk-kA-cMK"/>
@@ -236,6 +237,9 @@ place ready</string>
                             <constraint firstItem="mxU-Mq-NVa" firstAttribute="top" secondItem="RQd-55-xFe" secondAttribute="bottom" constant="8" id="wjy-GW-CHQ"/>
                             <constraint firstItem="RQd-55-xFe" firstAttribute="leading" secondItem="apL-Ov-DGI" secondAttribute="leadingMargin" id="xkN-mM-Mh9"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="oyW-va-F8z" appends="YES" id="Ltz-JX-xmX"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="change" destination="u8Z-2J-R5i" id="bYt-dy-fYj"/>
@@ -245,8 +249,21 @@ place ready</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJM-d5-9qB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" numberOfTouchesRequired="2" id="oyW-va-F8z">
+                    <connections>
+                        <segue destination="joR-hY-wL2" kind="presentation" id="hlA-m6-eI4"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-401" y="-651"/>
+        </scene>
+        <!--checkOutVC-->
+        <scene sceneID="5QG-95-E8q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="End" referencedIdentifier="checkOutVC" id="joR-hY-wL2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09v-es-q43" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249" y="-651"/>
         </scene>
     </scenes>
     <resources>

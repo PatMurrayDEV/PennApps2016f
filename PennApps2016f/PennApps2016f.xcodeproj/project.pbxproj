@@ -35,6 +35,7 @@
 		CD07058F1D83B984000D3E6C /* PHWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07058E1D83B984000D3E6C /* PHWelcomeViewController.swift */; };
 		CD0705911D83B994000D3E6C /* PHCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */; };
 		CD0705941D83BB64000D3E6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0705931D83BB64000D3E6C /* MapKit.framework */; };
+		CD4E2F931D852A1300BDB303 /* End.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4E2F921D852A1300BDB303 /* End.storyboard */; };
 		CD6ECE401D83C5F800092608 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */; };
 		CD6ECE421D84244600092608 /* PHUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6ECE411D84244600092608 /* PHUtilities.swift */; };
 		CD6ECE871D84445100092608 /* PHProblemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6ECE861D84445100092608 /* PHProblemsViewController.swift */; };
@@ -75,6 +76,7 @@
 		CD07058E1D83B984000D3E6C /* PHWelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHWelcomeViewController.swift; sourceTree = "<group>"; };
 		CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PHCheckinViewController.swift; path = ../PHCheckinViewController.swift; sourceTree = "<group>"; };
 		CD0705931D83BB64000D3E6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CD4E2F921D852A1300BDB303 /* End.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = End.storyboard; sourceTree = SOURCE_ROOT; };
 		CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CD6ECE411D84244600092608 /* PHUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHUtilities.swift; sourceTree = "<group>"; };
 		CD6ECE861D84445100092608 /* PHProblemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHProblemsViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				CD07057E1D83AE7F000D3E6C /* Main.storyboard */,
 				8456EBA51D83B27A00F37512 /* PostCheckin.storyboard */,
+				CD4E2F921D852A1300BDB303 /* End.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				8456EBA61D83B27A00F37512 /* PostCheckin.storyboard in Resources */,
 				CD0705851D83AE7F000D3E6C /* LaunchScreen.storyboard in Resources */,
+				CD4E2F931D852A1300BDB303 /* End.storyboard in Resources */,
 				CD0705821D83AE7F000D3E6C /* Assets.xcassets in Resources */,
 				CD0705801D83AE7F000D3E6C /* Main.storyboard in Resources */,
 				842459DF1D842BBB00CCF60A /* GooglePlaces.bundle in Resources */,
