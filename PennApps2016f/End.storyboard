@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Checkin View Controller-->
+        <!--Check Out View Controller-->
         <scene sceneID="rfZ-Oo-Bfa">
             <objects>
-                <viewController storyboardIdentifier="checkOutVC" id="6aY-oB-lsC" customClass="PHCheckinViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="checkOutVC" id="6aY-oB-lsC" customClass="PHCheckOutViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yZV-dT-4OG"/>
                         <viewControllerLayoutGuide type="bottom" id="Vqc-1g-w1M"/>
@@ -126,11 +126,99 @@
                         <outlet property="button3" destination="fwI-Z7-65W" id="fLm-Yh-ztl"/>
                         <outlet property="mainImageView" destination="Gqs-7c-oqW" id="V76-4H-I9z"/>
                         <outlet property="welcomeLabel" destination="Mzg-bq-3EX" id="cEO-R7-boz"/>
+                        <segue destination="Lkm-V6-bNw" kind="presentation" identifier="finishSegue" id="MS2-bf-nOS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybW-6U-xM6" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="90"/>
+            <point key="canvasLocation" x="1212" y="83"/>
+        </scene>
+        <!--Final View Controller-->
+        <scene sceneID="rXQ-28-iAf">
+            <objects>
+                <viewController id="Lkm-V6-bNw" customClass="PHFinalViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Jn-C5-vup"/>
+                        <viewControllerLayoutGuide type="bottom" id="4R5-Sq-H1M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n4Q-Xv-1Xb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for staying with us Harrison" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77z-R4-vIv">
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQI-uG-O6l">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="oso-wC-LKt"/>
+                                </constraints>
+                                <state key="normal" title="Reset Demo">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="button3Tapped:" destination="Lkm-V6-bNw" eventType="touchUpInside" id="wUQ-eF-ySE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6R-rX-8Yv" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="Oal-eL-ncr"/>
+                                    <constraint firstAttribute="height" constant="77" id="yl7-dl-1jL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Get Lyft ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="glowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button1Tapped:" destination="Lkm-V6-bNw" eventType="touchUpInside" id="PO7-Xj-bqF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="X6R-rX-8Yv" firstAttribute="top" secondItem="77z-R4-vIv" secondAttribute="bottom" constant="8" id="2pU-Vc-puB"/>
+                            <constraint firstItem="4R5-Sq-H1M" firstAttribute="top" secondItem="RQI-uG-O6l" secondAttribute="bottom" constant="8" id="TSg-6R-nr2"/>
+                            <constraint firstItem="RQI-uG-O6l" firstAttribute="leading" secondItem="n4Q-Xv-1Xb" secondAttribute="leadingMargin" id="b6P-4x-VVb"/>
+                            <constraint firstItem="RQI-uG-O6l" firstAttribute="trailing" secondItem="n4Q-Xv-1Xb" secondAttribute="trailingMargin" id="fw9-lY-u7W"/>
+                            <constraint firstItem="77z-R4-vIv" firstAttribute="leading" secondItem="n4Q-Xv-1Xb" secondAttribute="leadingMargin" id="kpf-2c-CNK"/>
+                            <constraint firstItem="77z-R4-vIv" firstAttribute="trailing" secondItem="n4Q-Xv-1Xb" secondAttribute="trailingMargin" id="ojb-2a-lTz"/>
+                            <constraint firstItem="X6R-rX-8Yv" firstAttribute="centerX" secondItem="n4Q-Xv-1Xb" secondAttribute="centerX" id="oys-G3-yer"/>
+                            <constraint firstItem="X6R-rX-8Yv" firstAttribute="centerY" secondItem="n4Q-Xv-1Xb" secondAttribute="centerY" id="qjq-8P-fHC"/>
+                            <constraint firstItem="77z-R4-vIv" firstAttribute="top" secondItem="2Jn-C5-vup" secondAttribute="bottom" constant="8" id="vSq-tb-qgl"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0PJ-jW-PQa" appends="YES" id="nTZ-Gr-Rzx"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="X6R-rX-8Yv" id="6du-9k-OBT"/>
+                        <outlet property="button3" destination="RQI-uG-O6l" id="Nkp-K7-xiz"/>
+                        <outlet property="topLabel" destination="77z-R4-vIv" id="VMB-km-APo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e48-v0-OH7" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" numberOfTouchesRequired="2" id="0PJ-jW-PQa"/>
+            </objects>
+            <point key="canvasLocation" x="2037.5999999999999" y="83.208395802098963"/>
         </scene>
     </scenes>
     <resources>

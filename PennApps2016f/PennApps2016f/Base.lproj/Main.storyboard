@@ -463,7 +463,7 @@ Maria's Place</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Un6-Ow-xlo" kind="presentation" id="mM1-X8-ryT"/>
+                                    <action selector="nextButtonTapped:" destination="7qd-7F-Bzc" eventType="touchUpInside" id="GKH-7a-rgI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPc-Q1-tIb" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
@@ -546,6 +546,7 @@ Maria's Place</string>
                         <outlet property="button3" destination="Pgv-zV-vjL" id="CO7-a1-MX2"/>
                         <outlet property="imageView" destination="OXv-5t-3t5" id="oBF-df-2KH"/>
                         <outlet property="topLabel" destination="LTW-px-D4A" id="z2T-jW-ZTy"/>
+                        <segue destination="Un6-Ow-xlo" kind="presentation" identifier="checkinsegueid" id="tI0-7W-Um6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCr-55-DTz" sceneMemberID="firstResponder"/>
@@ -680,6 +681,6 @@ Maria's Place</string>
         <image name="camera" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sS4-kg-GbY"/>
+        <segue reference="4Ir-af-Dc9"/>
     </inferredMetricsTieBreakers>
 </document>

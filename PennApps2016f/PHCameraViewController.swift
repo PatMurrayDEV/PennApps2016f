@@ -8,8 +8,9 @@
 
 import UIKit
 import CloudKit
+import MessageUI
 
-class PHCameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PHCameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMessageComposeViewControllerDelegate {
     
     @IBOutlet weak var topLabel: UILabel!
     
@@ -115,6 +116,7 @@ class PHCameraViewController: UIViewController, UIImagePickerControllerDelegate,
             
             UIImageWriteToSavedPhotosAlbum(pickedImage, nil, nil, nil)
             imageView.image = pickedImage
+            self.image = pickedImage
         }
         imagePicker.dismiss(animated: true, completion: {
             // Anything you want to happen when the user saves an image
@@ -129,6 +131,41 @@ class PHCameraViewController: UIViewController, UIImagePickerControllerDelegate,
         dismiss(animated: true, completion: {
             // Anything you want to happen when the user selects cancel
         })
+    }
+    
+    
+    
+    @IBAction func nextButtonTapped(_ sender: AnyObject) {
+        
+        self.sendMessage()
+    }
+    
+    
+    func sendMessage() {
+        let messageVC = MFMessageComposeViewController()
+        
+        messageVC.body = "Problems to report at check in:\n";
+        let imageData = UIImagePNGRepresentation(image!)
+        messageVC.addAttachmentData(imageData!, typeIdentifier: "public.data", filename: "problems.png")
+        messageVC.recipients = ["19732948935"]
+        messageVC.messageComposeDelegate = self;
+        
+        self.present(messageVC, animated: false, completion: nil)
+    }
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        switch (result) {
+        case .cancelled:
+            print("Message was cancelled")
+            self.dismiss(animated: true, completion: nil)
+        case .failed:
+            print("Message failed")
+            self.dismiss(animated: true, completion: nil)
+        case .sent:
+            print("Message was sent")
+            self.dismiss(animated: true, completion: nil)
+        }
+        self.performSegue(withIdentifier: "checkinsegueid", sender: self)
     }
     
 }

@@ -36,6 +36,10 @@
 		CD0705911D83B994000D3E6C /* PHCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */; };
 		CD0705941D83BB64000D3E6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0705931D83BB64000D3E6C /* MapKit.framework */; };
 		CD4E2F931D852A1300BDB303 /* End.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4E2F921D852A1300BDB303 /* End.storyboard */; };
+		CD4E2F951D852D1200BDB303 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4E2F941D852D1200BDB303 /* MessageUI.framework */; };
+		CD4E2F971D852D1600BDB303 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4E2F961D852D1600BDB303 /* Messages.framework */; };
+		CD4E2F991D8538D000BDB303 /* PHCheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E2F981D8538D000BDB303 /* PHCheckOutViewController.swift */; };
+		CD4E2F9B1D853A6A00BDB303 /* PHFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4E2F9A1D853A6A00BDB303 /* PHFinalViewController.swift */; };
 		CD6ECE401D83C5F800092608 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */; };
 		CD6ECE421D84244600092608 /* PHUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6ECE411D84244600092608 /* PHUtilities.swift */; };
 		CD6ECE871D84445100092608 /* PHProblemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6ECE861D84445100092608 /* PHProblemsViewController.swift */; };
@@ -77,6 +81,10 @@
 		CD0705901D83B994000D3E6C /* PHCheckinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PHCheckinViewController.swift; path = ../PHCheckinViewController.swift; sourceTree = "<group>"; };
 		CD0705931D83BB64000D3E6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CD4E2F921D852A1300BDB303 /* End.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = End.storyboard; sourceTree = SOURCE_ROOT; };
+		CD4E2F941D852D1200BDB303 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		CD4E2F961D852D1600BDB303 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		CD4E2F981D8538D000BDB303 /* PHCheckOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHCheckOutViewController.swift; sourceTree = "<group>"; };
+		CD4E2F9A1D853A6A00BDB303 /* PHFinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHFinalViewController.swift; sourceTree = "<group>"; };
 		CD6ECE3F1D83C5F800092608 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CD6ECE411D84244600092608 /* PHUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHUtilities.swift; sourceTree = "<group>"; };
 		CD6ECE861D84445100092608 /* PHProblemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHProblemsViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD4E2F971D852D1600BDB303 /* Messages.framework in Frameworks */,
+				CD4E2F951D852D1200BDB303 /* MessageUI.framework in Frameworks */,
 				842459F71D842C5900CCF60A /* UIKit.framework in Frameworks */,
 				842459F51D842C5400CCF60A /* SystemConfiguration.framework in Frameworks */,
 				842459F31D842C4F00CCF60A /* QuartzCore.framework in Frameworks */,
@@ -151,6 +161,8 @@
 		CD0705921D83BB64000D3E6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD4E2F961D852D1600BDB303 /* Messages.framework */,
+				CD4E2F941D852D1200BDB303 /* MessageUI.framework */,
 				84B4936E1D8472DF002DB3FA /* CloudKit.framework */,
 				842459F61D842C5900CCF60A /* UIKit.framework */,
 				842459F41D842C5400CCF60A /* SystemConfiguration.framework */,
@@ -211,6 +223,8 @@
 				CD6ECE861D84445100092608 /* PHProblemsViewController.swift */,
 				8456EBAB1D83C54700F37512 /* HWDuringStayViewController.swift */,
 				8456EBA71D83B36000F37512 /* HPGettingReadyViewController.swift */,
+				CD4E2F981D8538D000BDB303 /* PHCheckOutViewController.swift */,
+				CD4E2F9A1D853A6A00BDB303 /* PHFinalViewController.swift */,
 			);
 			name = "View Conrollers";
 			sourceTree = "<group>";
@@ -314,9 +328,11 @@
 				CD6ECE421D84244600092608 /* PHUtilities.swift in Sources */,
 				CD0705911D83B994000D3E6C /* PHCheckinViewController.swift in Sources */,
 				CD07058D1D83B1CF000D3E6C /* HPButton.swift in Sources */,
+				CD4E2F991D8538D000BDB303 /* PHCheckOutViewController.swift in Sources */,
 				8456EBAA1D83B75C00F37512 /* CheckMarkButton.swift in Sources */,
 				CD6ECE871D84445100092608 /* PHProblemsViewController.swift in Sources */,
 				8456EBAC1D83C54700F37512 /* HWDuringStayViewController.swift in Sources */,
+				CD4E2F9B1D853A6A00BDB303 /* PHFinalViewController.swift in Sources */,
 				8456EBA81D83B36000F37512 /* HPGettingReadyViewController.swift in Sources */,
 				CD07057B1D83AE7F000D3E6C /* AppDelegate.swift in Sources */,
 				CD07058F1D83B984000D3E6C /* PHWelcomeViewController.swift in Sources */,
