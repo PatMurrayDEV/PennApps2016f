@@ -55,40 +55,12 @@ class PHFinalViewController: UIViewController {
     
     @IBAction func button3Tapped(_ sender: AnyObject) {
         
-        let recordID = CKRecordID(recordName: "homeStatus")
-        let record = CKRecord(recordType: "home", recordID: recordID)
-        
-        record.setValue(false, forKey: "lightsOn")
-        record.setValue(true, forKey: "doorLocked")
-        record.setValue(false, forKey: "airConditioningOn")
-        
-        
-        let mod = CKModifyRecordsOperation(recordsToSave: [record], recordIDsToDelete: nil)
-        mod.savePolicy = .allKeys
-        mod.qualityOfService = .userInitiated
-        let db = CKContainer(identifier: "iCloud.com.harrisonweinerman.frontdesk").publicCloudDatabase
-        
-        mod.modifyRecordsCompletionBlock = { saved, deleted, error in
-            if error != nil {
-                print("error trynna modify")
-                print(error?.localizedDescription)
-            }
-            else {
-            print("done resetting CK records")
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let controller = storyboard.instantiateInitialViewController()! as UIViewController
-                    self.present(controller, animated: true, completion: nil)
-                }
-            }
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let controller = storyboard.instantiateInitialViewController()! as UIViewController
+    self.present(controller, animated: true, completion: nil)
+    
         }
-        
-        db.add(mod)
-
-        
-        
-
     }
     
     

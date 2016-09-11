@@ -8,6 +8,7 @@
 
 import UIKit
 import CloudKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -86,6 +87,10 @@ class ViewController: UIViewController {
             }
         }
     }
+    var lockSound = URL(fileURLWithPath: Bundle.main.path(forResource: "lock", ofType: "aiff")!)
+    var unlockSound = URL(fileURLWithPath: Bundle.main.path(forResource: "unlock", ofType: "aiff")!)
+
+    var audioPlayer = AVAudioPlayer()
     
     func lightsOn() {
         UIView.animate(withDuration: 0.8) {
@@ -101,6 +106,15 @@ class ViewController: UIViewController {
     func lock() {
         doorLockLabel.text = "Door locked"
         lockImage.image = UIImage(named: "padlock-closed")
+
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: lockSound)
+        }
+        catch {
+            print(error)
+        }
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
     }
     
     func lightsOff() {
@@ -117,6 +131,15 @@ class ViewController: UIViewController {
     func unlock() {
         doorLockLabel.text = "Door unlocked"
         lockImage.image = UIImage(named: "padlock-open")
+        
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOf: unlockSound)
+        }
+        catch {
+            print(error)
+        }
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
     }
 
     override func didReceiveMemoryWarning() {

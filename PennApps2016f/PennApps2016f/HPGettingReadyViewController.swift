@@ -70,14 +70,14 @@ class HPGettingReadyViewController: UIViewController {
                         
         })
         UIView.animate(withDuration: 0.5,
-                       delay: 0.5,
+                       delay: 0.2,
                        options: [UIViewAnimationOptions.curveEaseInOut, UIViewAnimationOptions.autoreverse, UIViewAnimationOptions.repeat],
                        animations: {
                         self.dot2.transform = CGAffineTransform.identity
                         
         })
         UIView.animate(withDuration: 0.5,
-                       delay: 1.0,
+                       delay: 0.4,
                        options: [UIViewAnimationOptions.curveEaseInOut, UIViewAnimationOptions.autoreverse, UIViewAnimationOptions.repeat],
                        animations: {
                         self.dot3.transform = CGAffineTransform.identity
@@ -99,14 +99,14 @@ class HPGettingReadyViewController: UIViewController {
                         
         })
         UIView.animate(withDuration: 0.3,
-                       delay: 0.15,
+                       delay: 0.2,
                        options: UIViewAnimationOptions.curveEaseInOut,
                        animations: {
                         self.dot2.transform = CGAffineTransform(translationX: 0, y: -50)
                         
         })
         UIView.animate(withDuration: 0.3,
-                       delay: 0.3,
+                       delay: 0.4,
                        options: UIViewAnimationOptions.curveEaseInOut,
                        animations: {
                         self.dot3.transform = CGAffineTransform(translationX: 0, y: -50)

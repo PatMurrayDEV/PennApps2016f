@@ -11,6 +11,9 @@
 		840D1E5C1D84BF6300D33938 /* houseLights.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 840D1E5B1D84BF6300D33938 /* houseLights.jpg */; };
 		84554B131D84C8A300AEC2F1 /* padlock-closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 84554B111D84C8A300AEC2F1 /* padlock-closed.png */; };
 		84554B141D84C8A300AEC2F1 /* padlock-open.png in Resources */ = {isa = PBXBuildFile; fileRef = 84554B121D84C8A300AEC2F1 /* padlock-open.png */; };
+		84554B651D8560B900AEC2F1 /* lock.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 84554B631D8560B900AEC2F1 /* lock.aiff */; };
+		84554B661D8560B900AEC2F1 /* unlock.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 84554B641D8560B900AEC2F1 /* unlock.aiff */; };
+		84554B681D85611600AEC2F1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84554B671D85611600AEC2F1 /* AVFoundation.framework */; };
 		84B4937D1D849E0C002DB3FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4937C1D849E0C002DB3FA /* AppDelegate.swift */; };
 		84B4937F1D849E0C002DB3FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4937E1D849E0C002DB3FA /* ViewController.swift */; };
 		84B493821D849E0C002DB3FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B493801D849E0C002DB3FA /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 		840D1E5B1D84BF6300D33938 /* houseLights.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = houseLights.jpg; path = ../../../../../houseLights.jpg; sourceTree = "<group>"; };
 		84554B111D84C8A300AEC2F1 /* padlock-closed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "padlock-closed.png"; path = "../../../../../../Downloads/padlock-closed.png"; sourceTree = "<group>"; };
 		84554B121D84C8A300AEC2F1 /* padlock-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "padlock-open.png"; path = "../../../../../../Downloads/padlock-open.png"; sourceTree = "<group>"; };
+		84554B631D8560B900AEC2F1 /* lock.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = lock.aiff; sourceTree = "<group>"; };
+		84554B641D8560B900AEC2F1 /* unlock.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = unlock.aiff; sourceTree = "<group>"; };
+		84554B671D85611600AEC2F1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		84B493791D849E0C002DB3FA /* frontdesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frontdesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B4937C1D849E0C002DB3FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B4937E1D849E0C002DB3FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84554B681D85611600AEC2F1 /* AVFoundation.framework in Frameworks */,
 				84B493911D849E42002DB3FA /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +77,8 @@
 				84B4938E1D849E3C002DB3FA /* frontdesk.entitlements */,
 				84B4937C1D849E0C002DB3FA /* AppDelegate.swift */,
 				84B4937E1D849E0C002DB3FA /* ViewController.swift */,
+				84554B631D8560B900AEC2F1 /* lock.aiff */,
+				84554B641D8560B900AEC2F1 /* unlock.aiff */,
 				84554B111D84C8A300AEC2F1 /* padlock-closed.png */,
 				84554B121D84C8A300AEC2F1 /* padlock-open.png */,
 				840D1E591D84BF2300D33938 /* house.jpg */,
@@ -85,6 +94,7 @@
 		84B4938F1D849E42002DB3FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84554B671D85611600AEC2F1 /* AVFoundation.framework */,
 				84B493901D849E42002DB3FA /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -161,9 +171,11 @@
 				840D1E5A1D84BF2300D33938 /* house.jpg in Resources */,
 				84B493871D849E0C002DB3FA /* LaunchScreen.storyboard in Resources */,
 				84554B131D84C8A300AEC2F1 /* padlock-closed.png in Resources */,
+				84554B661D8560B900AEC2F1 /* unlock.aiff in Resources */,
 				84554B141D84C8A300AEC2F1 /* padlock-open.png in Resources */,
 				84B493841D849E0C002DB3FA /* Assets.xcassets in Resources */,
 				840D1E5C1D84BF6300D33938 /* houseLights.jpg in Resources */,
+				84554B651D8560B900AEC2F1 /* lock.aiff in Resources */,
 				84B493821D849E0C002DB3FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
