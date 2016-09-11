@@ -40,9 +40,9 @@ class PHWelcomeViewController: UIViewController, CLLocationManagerDelegate {
         let region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 39.995168, longitude: -75.149842), 5928*2, 5928*2)
         mapView.setRegion(region, animated: true)
         
-        manager.requestLocation()
-        manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        manager.requestWhenInUseAuthorization()
+     //   manager.requestLocation()
+     //   manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+     //   manager.requestWhenInUseAuthorization()
 
         
     }
@@ -98,9 +98,6 @@ class PHWelcomeViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func button2Tapped(_ sender: AnyObject) {
         PHUtilities.callNumber(phoneNumber: "19732948935")
-    }
-    
-    @IBAction func button3Tapped(_ sender: AnyObject) {
     }
     
     

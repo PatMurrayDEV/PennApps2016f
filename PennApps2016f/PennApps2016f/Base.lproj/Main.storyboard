@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -59,7 +59,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="button1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0G-Cd-RG2"/>
-                                    <action selector="button1Tapped:" destination="ZBr-Gz-TFt" eventType="touchDragInside" id="wik-7A-Bhg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOF-oL-28k">
@@ -71,7 +70,6 @@
                                 </state>
                                 <connections>
                                     <action selector="button3Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Rn-Lp-ila"/>
-                                    <action selector="button3Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="hdG-sb-ugi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-Iw-MoL" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
@@ -95,7 +93,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="button2Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="HCR-kw-R5y"/>
                                     <action selector="button2Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iDK-gK-EX2"/>
                                 </connections>
                             </button>
@@ -203,7 +200,6 @@ Maria's Place</string>
                                 </state>
                                 <connections>
                                     <action selector="button3Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="vIw-QU-gHH"/>
-                                    <segue destination="ujl-ie-Rqq" kind="presentation" modalTransitionStyle="crossDissolve" id="5Uo-87-FHj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nz-9j-laO" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
@@ -261,7 +257,7 @@ Maria's Place</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="button1Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="cW1-bI-oUC"/>
+                                    <action selector="button1Tapped:" destination="ZBr-Gz-TFt" eventType="touchUpInside" id="Owu-kc-Frc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -289,16 +285,25 @@ Maria's Place</string>
                         <outlet property="button3" destination="rAb-9M-ave" id="nlU-U8-coy"/>
                         <outlet property="mainImageView" destination="c1C-QN-LtN" id="6M6-o3-Ajw"/>
                         <outlet property="welcomeLabel" destination="qKJ-iM-c5V" id="6Gj-5L-8Lb"/>
+                        <segue destination="06C-WT-0hL" kind="presentation" identifier="CheckIn" id="GHU-gt-wko"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lAY-M3-KEF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816.79999999999995" y="137.18140929535232"/>
+            <point key="canvasLocation" x="887" y="90"/>
+        </scene>
+        <!--PostCheckin-->
+        <scene sceneID="jQg-Qe-06R">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PostCheckin" id="06C-WT-0hL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1u-vc-6wa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1393" y="279"/>
         </scene>
         <!--Problems View Controller-->
         <scene sceneID="7tu-p6-iB8">
             <objects>
-                <viewController id="ujl-ie-Rqq" customClass="PHProblemsViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CheckDamageVC" id="ujl-ie-Rqq" customClass="PHProblemsViewController" customModule="PennApps2016f" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UVg-3O-JgG"/>
                         <viewControllerLayoutGuide type="bottom" id="f3S-EJ-qZY"/>
@@ -339,7 +344,7 @@ Maria's Place</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="button1Tapped:" destination="ujl-ie-Rqq" eventType="touchDragInside" id="Iye-YL-UsW"/>
+                                    <segue destination="MTL-3H-DZX" kind="presentation" id="sS4-kg-GbY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cc1-Cy-HWB" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
@@ -416,7 +421,7 @@ Maria's Place</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaY-te-BaF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1570" y="137"/>
+            <point key="canvasLocation" x="1879" y="137"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="bhE-4D-B5d">
@@ -457,7 +462,7 @@ Maria's Place</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="button3Tapped:" destination="7qd-7F-Bzc" eventType="touchUpInside" id="64R-Z1-WdS"/>
+                                    <segue destination="Un6-Ow-xlo" kind="presentation" id="mM1-X8-ryT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPc-Q1-tIb" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
@@ -482,7 +487,7 @@ Maria's Place</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="button2Tapped:" destination="7qd-7F-Bzc" eventType="touchUpInside" id="Tz1-xk-BN0"/>
+                                    <segue destination="MTL-3H-DZX" kind="presentation" id="4Ir-af-Dc9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgv-zV-vjL">
@@ -544,7 +549,23 @@ Maria's Place</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCr-55-DTz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="136.28185907046478"/>
+            <point key="canvasLocation" x="2564" y="137"/>
+        </scene>
+        <!--CheckedIn-->
+        <scene sceneID="vby-d1-pQS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PostCheckin" referencedIdentifier="CheckedIn" id="Un6-Ow-xlo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ykO-Pw-Z3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3090" y="193"/>
+        </scene>
+        <!--CheckedIn-->
+        <scene sceneID="aWf-KM-4bI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PostCheckin" referencedIdentifier="CheckedIn" id="MTL-3H-DZX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fuu-3v-crw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2510" y="617"/>
         </scene>
         <!--Problems View Controller-->
         <scene sceneID="w92-dG-Xd0">
@@ -648,7 +669,7 @@ Maria's Place</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aro-fB-D26" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3015" y="137"/>
+            <point key="canvasLocation" x="2956" y="-601"/>
         </scene>
     </scenes>
     <resources>
@@ -657,4 +678,7 @@ Maria's Place</string>
         <image name="HouseArtwork" width="1280" height="960"/>
         <image name="camera" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Ir-af-Dc9"/>
+    </inferredMetricsTieBreakers>
 </document>

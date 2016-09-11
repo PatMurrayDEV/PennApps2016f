@@ -126,7 +126,9 @@ class HPGettingReadyViewController: UIViewController {
         mod.qualityOfService = .userInitiated
         let db = CKContainer(identifier: "iCloud.com.harrisonweinerman.frontdesk").publicCloudDatabase
 
-        db.add(mod)
+        db.add(mod) 
+        
+        
         
         /*
         db.save(record) { (record, error) in
@@ -197,6 +199,9 @@ class HPGettingReadyViewController: UIViewController {
             self.doorCheckmark.showAnimation = true
         }
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            self.performSegue(withIdentifier: "checkDamageSegue", sender: self)
+        }
     }
 
     /*

@@ -32,7 +32,10 @@ class PHCheckinViewController: UIViewController {
 
     @IBAction func button1Tapped(_ sender: AnyObject) {
         let timeStamp = NSDate().dateStringWithFormat(format: "Hmm a")
-        PHUtilities.smsNumber(phoneNumber: "19732948935", message: "Harrison checked in to your property at \(timeStamp)")
+   //     PHUtilities.smsNumber(phoneNumber: "19732948935", message: "Harrison checked in to your property at \(timeStamp)")
+        
+       // self.performSegue(withIdentifier: "CheckIn", sender: self)
+        
 
         let storyboard = UIStoryboard(name: "PostCheckin", bundle: nil)
         let controller = storyboard.instantiateInitialViewController()! as UIViewController
