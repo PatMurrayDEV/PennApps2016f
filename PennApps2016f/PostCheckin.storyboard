@@ -161,7 +161,7 @@ place ready</string>
                                     <action selector="callHost:" destination="J0p-Lb-YHd" eventType="touchUpInside" id="lYB-KK-TNO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8Z-2J-R5i" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8Z-2J-R5i" customClass="HPButton" customModule="PennApps2016f" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="248" id="8VZ-2O-ZFl"/>
                                     <constraint firstAttribute="height" constant="49" id="epd-dr-2Hd"/>
