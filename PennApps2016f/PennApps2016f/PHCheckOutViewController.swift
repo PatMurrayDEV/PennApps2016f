@@ -30,8 +30,8 @@ class PHCheckOutViewController: UIViewController {
     
     
     @IBAction func button1Tapped(_ sender: AnyObject) {
-        //        let timeStamp = NSDate().dateStringWithFormat(format: "Hmm a")
-        //     PHUtilities.smsNumber(phoneNumber: "19732948935", message: "Harrison checked out of your property at \(timeStamp)")
+        let timeStamp = NSDate().dateStringWithFormat(format: "Hmm a")
+        PHUtilities.smsNumber(phoneNumber: "12022909517", message: "Harrison checked out of your property at \(timeStamp)")
         
         
         
@@ -39,7 +39,7 @@ class PHCheckOutViewController: UIViewController {
     }
     
     @IBAction func button2Tapped(_ sender: AnyObject) {
-//        PHUtilities.callNumber(phoneNumber: "19732948935")
+//        PHUtilities.callNumber(phoneNumber: "12022909517")
         
     }
     
