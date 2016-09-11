@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreLocation
-import GooglePlaces
+//import GooglePlaces
 
 struct place {
     var name : String
