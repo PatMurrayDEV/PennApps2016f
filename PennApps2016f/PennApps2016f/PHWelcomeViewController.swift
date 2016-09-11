@@ -27,7 +27,7 @@ class PHWelcomeViewController: UIViewController {
         super.viewDidLoad()
        // manager.delegate = self
         // Do any additional setup after loading the view.
-        zoomToRegion()
+//        zoomToRegion()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,9 +35,13 @@ class PHWelcomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        zoomToRegion()
+    }
+    
     func zoomToRegion() {
         
-        let region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 39.995168, longitude: -75.149842), 5928*2, 5928*2)
+        let region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 39.949405, longitude: -75.164129), 5928*2, 5928*2)
         mapView.setRegion(region, animated: true)
         
      //   manager.requestLocation()

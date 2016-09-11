@@ -71,6 +71,7 @@ class PHFinalViewController: UIViewController {
         mod.modifyRecordsCompletionBlock = { saved, deleted, error in
             if error != nil {
                 print("error trynna modify")
+                print(error?.localizedDescription)
             }
             else {
             print("done resetting CK records")
