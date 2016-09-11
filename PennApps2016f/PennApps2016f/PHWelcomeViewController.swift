@@ -101,7 +101,7 @@ class PHWelcomeViewController: UIViewController {
     }
     
     @IBAction func button2Tapped(_ sender: AnyObject) {
-        PHUtilities.callNumber(phoneNumber: "19732948935")
+        PHUtilities.callNumber(phoneNumber: "12022909517")
     }
     
     

@@ -147,7 +147,7 @@ class PHCameraViewController: UIViewController, UIImagePickerControllerDelegate,
         messageVC.body = "Problems to report at check in:\n";
         let imageData = UIImagePNGRepresentation(image!)
         messageVC.addAttachmentData(imageData!, typeIdentifier: "public.data", filename: "problems.png")
-        messageVC.recipients = ["19732948935"]
+        messageVC.recipients = ["12022909517"]
         messageVC.messageComposeDelegate = self;
         
         self.present(messageVC, animated: false, completion: nil)
