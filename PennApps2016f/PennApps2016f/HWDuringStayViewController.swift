@@ -52,7 +52,7 @@ class HWDuringStayViewController: UIViewController {
          //   CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways)
         //{
             
-            let search = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.995168,-75.149842&radius=500&type=restaurant&key=AIzaSyCk-laMzz7nwobXmg3NHUCyg8PaAFe_Jrk"
+            let search = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.995168,-75.149842&radius=500&type=restaurant&key=XXXX"
 
             
             let searchURL = URL(string: search);
@@ -120,7 +120,7 @@ class HWDuringStayViewController: UIViewController {
     func downloadImage() {
         let ref = (self.results[0]["photos"] as! [[String : AnyObject]])[0]["photo_reference"] as! String
         
-        let urlCall = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=" + ref + "&key=AIzaSyCk-laMzz7nwobXmg3NHUCyg8PaAFe_Jrk"
+        let urlCall = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photoreference=" + ref + "&key=XXXXX"
         
         let imageURL = URL(string: urlCall);
         var imageRequest = URLRequest(url: imageURL!)
