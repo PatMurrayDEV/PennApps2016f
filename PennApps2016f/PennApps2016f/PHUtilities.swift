@@ -21,10 +21,10 @@ class PHUtilities: NSObject {
     }
     
     class func smsNumber(phoneNumber:String, message:String) {
-//        https://rest.nexmo.com/sms/json?from=12016215775&to=12022909517&text=HELLLLOOOO&api_key=dccb2143&api_secret=7aefd95414dc5684
+//        https://rest.nexmo.com/sms/json?from=XXX&to=XXX&text=HELLLLOOOO&api_key=XXX&api_secret=XXX
         
         
-        let stringURL = "https://rest.nexmo.com/sms/json?from=12016215775&to=\(phoneNumber)&text=\(message) &api_key=dccb2143&api_secret=7aefd95414dc5684"
+        let stringURL = "https://rest.nexmo.com/sms/json?from=XXXX&to=\(phoneNumber)&text=\(message) &api_key=XXXX&api_secret=XXXXX"
         
         let newString = stringURL.replacingOccurrences(of: " ", with: "%20")
         
